@@ -26,12 +26,25 @@
 </script>
 
 <nav class="w-full bg-slate-500 dark:bg-slate-900 dark:text-green-200 p-4 text-green-400">
-	<button class="p-2 text-lg border-2 border-green-500 rounded-md" on:click={theme}
-		>Change theme</button
+	<button
+		class="p-2 text-lg border-2 border-green-500 rounded-md dark:hover:text-lime-600 hover:text-green-900 duration-200"
+		on:click={theme}>Change theme</button
 	>
-	<a href="/" class="p-2 text-lg border-2 border-green-500 rounded-md">Home</a>
-	<a href="/privacy" class="p-2 text-lg border-2 border-green-500 rounded-md">Privacy</a>
-	<a href="/terms" class="p-2 text-lg border-2 border-green-500 rounded-md">Terms</a>
+	<a
+		href="/"
+		class="hover:border-emerald-900 hover:rounded-xl duration-300 p-2 text-lg border-2 border-green-500 rounded-md"
+		>Home</a
+	>
+	<a
+		href="/privacy"
+		class="hover:border-emerald-900 hover:rounded-xl duration-300 p-2 text-lg border-2 border-green-500 rounded-md"
+		>Privacy</a
+	>
+	<a
+		href="/terms"
+		class="hover:border-emerald-900 hover:rounded-xl duration-300 p-2 text-lg border-2 border-green-500 rounded-md"
+		>Terms</a
+	>
 </nav>
 <slot />
 <footer class="w-full bg-slate-400 dark:bg-zinc-900 p-4">

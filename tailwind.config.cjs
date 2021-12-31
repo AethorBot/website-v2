@@ -1,5 +1,5 @@
 const typography = require('@tailwindcss/typography');
-
+const scrollbar = require('tailwindcss-scrollbar');
 const config = {
 	content: ['./src/**/*.{html,js,svelte,ts}'],
 	darkMode: 'class',
@@ -28,7 +28,7 @@ const config = {
 		}
 	},
 
-	plugins: [typography]
+	plugins: [typography, scrollbar]
 };
 
 module.exports = config;

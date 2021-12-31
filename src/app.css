@@ -5,7 +5,7 @@
 html {
 	@apply font-body;
 }
-body,
-html {
-	@apply bg-white dark:bg-slate-700;
+
+body {
+	@apply bg-white dark:bg-slate-700 scrollbar scrollbar-thumb-lime-600 scrollbar-track-green-700 dark:scrollbar-thumb-green-900 dark:scrollbar-track-lime-800 scrollbar-w-2;
 }

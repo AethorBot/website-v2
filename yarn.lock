@@ -50,11 +50,6 @@
   resolved "https://registry.yarnpkg.com/@fontsource/aldrich/-/aldrich-4.5.0.tgz#572fbf0c53065cce87c692dec88ca061a218b411"
   integrity sha512-cZweT6eRyXWuu7NU4dm56U48zOdpx9B00fIJuuu197Qdlh6S4NJsjbcNkbskjG36Zuk2y32W5S3O3Kr41uGLoA==
 
-"@fontsource/chelsea-market@^4.5.0":
-  version "4.5.0"
-  resolved "https://registry.yarnpkg.com/@fontsource/chelsea-market/-/chelsea-market-4.5.0.tgz#197273764756e8c0dd67f927d2cf7135c88beec1"
-  integrity sha512-pfDyat+zSzuKiZ4eBCUGnFebkwfgtbK+IUSq4zIgWNTmUlDF+r4uKhQo1voXqqICYtQwEMSxSN3RpkSkvg+tYA==
-
 "@humanwhocodes/config-array@^0.5.0":
   version "0.5.0"
   resolved "https://registry.yarnpkg.com/@humanwhocodes/config-array/-/config-array-0.5.0.tgz#1407967d4c6eecd7388f83acf1eaf4d0c6e58ef9"
@@ -126,6 +121,13 @@
   dependencies:
     "@iarna/toml" "^2.2.5"
     esbuild "^0.13.15"
+    tiny-glob "^0.2.9"
+
+"@sveltejs/adapter-static@^1.0.0-next.34":
+  version "1.0.0-next.24"
+  resolved "https://registry.yarnpkg.com/@sveltejs/adapter-static/-/adapter-static-1.0.0-next.24.tgz#55195eaadf2b81a7ebc7c8d44cb3ed600a0a46de"
+  integrity sha512-lMiwZrZumWRrTQxaj9pFs5oW0h/97spyDl1QjmnkNaA006WeqornoETt31WpU0Lz2/2uYNXvUBBcL1LGc9Vylg==
+  dependencies:
     tiny-glob "^0.2.9"
 
 "@sveltejs/adapter-vercel@1.0.0-next.34", "@sveltejs/adapter-vercel@^1.0.0-next.34":
@@ -1725,6 +1727,11 @@ table@^6.0.9:
     slice-ansi "^4.0.0"
     string-width "^4.2.3"
     strip-ansi "^6.0.1"
+
+tailwindcss-scrollbar@^0.1.0:
+  version "0.1.0"
+  resolved "https://registry.yarnpkg.com/tailwindcss-scrollbar/-/tailwindcss-scrollbar-0.1.0.tgz#2cd38aa7c0daceed9c4aa34691e8f5ee1e621856"
+  integrity sha512-egipxw4ooQDh94x02XQpPck0P0sfwazwoUGfA9SedPATIuYDR+6qe8d31Gl7YsSMRiOKDkkqfI0kBvEw9lT/Hg==
 
 tailwindcss@^3.0.7:
   version "3.0.8"
