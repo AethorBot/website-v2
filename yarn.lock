@@ -128,7 +128,7 @@
     esbuild "^0.13.15"
     tiny-glob "^0.2.9"
 
-"@sveltejs/adapter-vercel@1.0.0-next.34":
+"@sveltejs/adapter-vercel@1.0.0-next.34", "@sveltejs/adapter-vercel@^1.0.0-next.34":
   version "1.0.0-next.34"
   resolved "https://registry.yarnpkg.com/@sveltejs/adapter-vercel/-/adapter-vercel-1.0.0-next.34.tgz#8bdf5ce1fbaddbc08790a6090131eb7dd5c44550"
   integrity sha512-TQDQK2wjDQkoSkNVuFVu4a/hzqKIWCGL15Zi7zQv740ZSd6F2Lg9QHlFfEXMglu6mhoep084h6JiLtzavNiZeA==

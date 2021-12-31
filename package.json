@@ -36,6 +36,7 @@
 	"type": "module",
 	"dependencies": {
 		"@fontsource/aldrich": "^4.5.0",
-		"@fontsource/chelsea-market": "^4.5.0"
+		"@fontsource/chelsea-market": "^4.5.0",
+		"@sveltejs/adapter-vercel": "^1.0.0-next.34"
 	}
 }
