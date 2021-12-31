@@ -1,7 +1,7 @@
-<script>
+<script context="module" lang="ts">
 	export const ssr = true;
 	export const prerender = true;
-	export const hydrate = false;
+	export const hydrate = true;
 	export const router = false;
 </script>
 

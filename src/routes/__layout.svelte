@@ -4,10 +4,7 @@
 	import '../app.css';
 
 	onMount(() => {
-		if (
-			localStorage.theme === 'dark' ||
-			(!('theme' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches)
-		) {
+		if (localStorage.theme === 'dark' || !('theme' in localStorage)) {
 			document.documentElement.classList.add('dark');
 		} else {
 			document.documentElement.classList.remove('dark');
@@ -44,6 +41,11 @@
 		href="/terms"
 		class="hover:border-emerald-900 hover:rounded-xl duration-300 p-2 text-lg border-2 border-green-500 rounded-md"
 		>Terms</a
+	>
+	<a
+		href="/commands"
+		class="hover:border-emerald-900 hover:rounded-xl duration-300 p-2 text-lg border-2 border-green-500 rounded-md"
+		>Commands</a
 	>
 </nav>
 <slot />
