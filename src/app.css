@@ -1,0 +1,11 @@
+/* Write your global styles here, in PostCSS syntax */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+html {
+	@apply font-body;
+}
+body,
+html {
+	@apply bg-white dark:bg-slate-700;
+}
