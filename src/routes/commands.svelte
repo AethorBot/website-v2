@@ -1,7 +1,7 @@
-<script context="module" lang="ts">
+<script>
 	export const ssr = true;
 	export const prerender = true;
-	export const hydrate = true;
+	export const hydrate = false;
 	export const router = false;
 	const commands = {
 		config: [
