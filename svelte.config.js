@@ -12,7 +12,7 @@ const config = {
 	preprocess: [preprocess({}), mdsvex(mdsvexConfig)],
 
 	kit: {
-		adapter: adapter(),
+		adapter: adapter({ split: false }),
 
 		// hydrate the <div id="svelte"> element in src/app.html
 		target: '#main'
