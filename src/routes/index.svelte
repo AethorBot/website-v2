@@ -38,7 +38,7 @@
 <div class="w-full">
 	{#each features as feature, index}
 		<div
-			class={'md:flex lg:flex !prose-headings:text-black rounded-3xl w-full' +
+			class={'md:flex lg:flex !prose-headings:text-black rounded-3xl w-full p-2' +
 				(index % 2 ? 'ml-auto mr-0' : 'mr-auto ml-0')}
 		>
 			{#if index % 2}
