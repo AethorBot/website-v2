@@ -563,7 +563,7 @@
 
 <div class="p-4">
 	<input
-		class="dark:text-lime-300 text-neutral-900 text-lg border-2 border-emerald-300 p-4 rounded-sm w-full bg-green-200 dark:bg-lime-900 "
+		class="dark:text-lime-300 focus:border-blue-700 focus:rounded-md focus:outline-none text-neutral-900 text-lg border-2 border-emerald-300 p-4 rounded-sm w-full bg-green-200 dark:bg-lime-900 "
 		placeholder="Search"
 		bind:value={toSearch}
 		on:input={() => {
