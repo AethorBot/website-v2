@@ -581,7 +581,7 @@
 	<div
 		class="dark:text-lime-300 text-neutral-900 text-lg border-2 border-emerald-300 p-4 rounded-sm"
 	>
-		<ul>
+		<ul class="md:flex lg:flex md:flex-wrap lg:flex-wrap lg:justify-between md:justify-between">
 			{#each categories as catergory}
 				<li>
 					<a
