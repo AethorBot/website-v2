@@ -1,6 +1,8 @@
 <script>
 	import Paragraph from '../components/paragraph.svelte';
 
+	import Mediaquery from '../components/mediaquery.svelte';
+
 	export const ssr = true;
 	export const prerender = true;
 	export const hydrate = false;
@@ -37,28 +39,52 @@
 
 <div class="w-full">
 	{#each features as feature, index}
-		<div
-			class={'md:flex lg:flex !prose-headings:text-black rounded-3xl w-full p-2' +
-				(index % 2 ? 'ml-auto mr-0' : 'mr-auto ml-0')}
-		>
-			{#if index % 2}
-				<div class="m-auto">
-					<h3 class="text-7xl text-green-500">{feature.name}</h3>
-					<p class="text-2xl dark:text-green-600 text-blue-800">{feature.description}</p>
-				</div>
-				<div class="m-auto">
-					<img class="h-96 object-cover" alt={feature.name} src={`/features/${feature.image}`} />
+		<Mediaquery query="(max-width: 1024px)" let:matches>
+			{#if matches}
+				<div
+					class={'md:flex lg:flex !prose-headings:text-black rounded-3xl w-full p-2 ml-auto mr-0'}
+				>
+					<div class="m-auto">
+						<h3 class="text-7xl text-green-500">{feature.name}</h3>
+						<p class="text-2xl dark:text-green-600 text-blue-800">{feature.description}</p>
+					</div>
+					<div class="m-auto">
+						<img class="h-96 object-cover" alt={feature.name} src={`/features/${feature.image}`} />
+					</div>
 				</div>
 			{:else}
-				<div class="m-auto">
-					<img class="h-96 object-cover" alt={feature.name} src={`/features/${feature.image}`} />
-				</div>
-				<div class="m-auto">
-					<h3 class="text-7xl text-green-500">{feature.name}</h3>
-					<p class="text-2xl dark:text-green-600 text-blue-800">{feature.description}</p>
+				<div
+					class={'md:flex lg:flex !prose-headings:text-black rounded-3xl w-full p-2' +
+						(index % 2 ? 'ml-auto mr-0' : 'mr-auto ml-0')}
+				>
+					{#if index % 2}
+						<div class="m-auto">
+							<h3 class="text-7xl text-green-500">{feature.name}</h3>
+							<p class="text-2xl dark:text-green-600 text-blue-800">{feature.description}</p>
+						</div>
+						<div class="m-auto">
+							<img
+								class="h-96 object-cover"
+								alt={feature.name}
+								src={`/features/${feature.image}`}
+							/>
+						</div>
+					{:else}
+						<div class="m-auto">
+							<img
+								class="h-96 object-cover"
+								alt={feature.name}
+								src={`/features/${feature.image}`}
+							/>
+						</div>
+						<div class="m-auto">
+							<h3 class="text-7xl text-green-500">{feature.name}</h3>
+							<p class="text-2xl dark:text-green-600 text-blue-800">{feature.description}</p>
+						</div>
+					{/if}
 				</div>
 			{/if}
-		</div>
+		</Mediaquery>
 	{/each}
 </div>
 

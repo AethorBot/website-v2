@@ -533,15 +533,18 @@
 	const search = new Fuse(commandlist, {
 		keys: [
 			'n',
-			'a',
 			'c',
 			{
+				name: 'a',
+				weight: 2
+			},
+			{
 				name: 's',
-				weight: 4
+				weight: 8
 			},
 			{
 				name: 'd',
-				weight: 2
+				weight: 4
 			}
 		]
 	});
@@ -568,11 +571,17 @@
 		bind:value={toSearch}
 		on:input={() => {
 			//Theres probably a better way to do this but idk how /shrug
-			const searchParams = new URLSearchParams(window.location.search);
-			searchParams.set('search', toSearch);
-			const newLoc = new URL(window.location.toString());
-			newLoc.search = searchParams.toString();
-			window.history.pushState({}, null, newLoc);
+			if (toSearch !== '') {
+				const searchParams = new URLSearchParams(window.location.search);
+				searchParams.set('search', toSearch);
+				const newLoc = new URL(window.location.toString());
+				newLoc.search = searchParams.toString();
+				window.history.pushState({}, null, newLoc);
+			} else {
+				const newLoc = new URL(window.location.toString());
+				newLoc.search = '';
+				window.history.pushState({}, null, newLoc);
+			}
 
 			updateSearch();
 		}}
