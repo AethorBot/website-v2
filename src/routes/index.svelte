@@ -2,6 +2,7 @@
 	import Paragraph from '../components/paragraph.svelte';
 
 	import Mediaquery from '../components/mediaquery.svelte';
+	import Addbutton from '../components/addbutton.svelte';
 
 	export const ssr = true;
 	export const prerender = true;
@@ -86,6 +87,9 @@
 			{/if}
 		</Mediaquery>
 	{/each}
+</div>
+<div class="flex justify-center">
+	<Addbutton size="xxxl" />
 </div>
 
 <Paragraph>

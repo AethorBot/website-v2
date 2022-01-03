@@ -1,5 +1,6 @@
 <script>
 	import '@fontsource/aldrich';
+	import Addbutton from '../components/addbutton.svelte';
 	import { onMount } from 'svelte';
 	import '../app.css';
 
@@ -57,5 +58,8 @@
 			<a href="https://top.gg/bot/870383692403593226">Top.gg</a>
 			<a href="https://discord.gg/zwUQGAG4cP">Support/Discord</a>
 		</p>
+	</div>
+	<div class="p-2">
+		<Addbutton />
 	</div>
 </footer>
