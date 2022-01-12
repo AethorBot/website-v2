@@ -4,16 +4,12 @@
     lg:prose-xl
     prose-teal
     dark:prose-invert
-    prose-headings:text-green-500
-    dark:prose-headings:text-green-400
+    prose-headings:text-sky-900
+    dark:prose-headings:text-sky-500
     prose-p:text-gray-900
-    dark:prose-p:text-lime-200
+    dark:prose-p:text-blue-300
     prose-a:text-red-900
     dark:prose-a:text-red-500
-    prose-hr:border-emerald-800
-    prose-hr:bg-emerald-800
-    prose-hr:dark:border-emerald-500
-    prose-hr:dark:bg-emerald-500
     "
 >
 	<slot />

@@ -1,5 +1,6 @@
 <script lang="ts">
 	import Fuse from 'fuse.js';
+	import CommandItem from '../components/commandItem.svelte';
 	import { onMount } from 'svelte';
 	import Paragraph from '../components/paragraph.svelte';
 	export const ssr = true;
@@ -566,7 +567,7 @@
 
 <div class="p-4">
 	<input
-		class="dark:text-lime-300 focus:border-blue-700 focus:rounded-md focus:outline-none text-neutral-900 text-lg border-2 border-emerald-300 p-4 rounded-sm w-full bg-green-200 dark:bg-lime-900 "
+		class="dark:text-sky-300 focus:border-blue-700 focus:rounded-md focus:outline-none text-neutral-900 text-lg border-2 border-sky-300 p-4 rounded-sm w-full bg-sky-200 dark:bg-sky-900 "
 		placeholder="Search"
 		bind:value={toSearch}
 		on:input={() => {
@@ -587,14 +588,12 @@
 		}}
 	/>
 	<div class="pt-4" />
-	<div
-		class="dark:text-lime-300 text-neutral-900 text-lg border-2 border-emerald-300 p-4 rounded-sm"
-	>
+	<div class="dark:text-sky-300 text-sky-900 text-lg border-2 border-sky-300 p-4 rounded-sm">
 		<ul class="md:flex lg:flex md:flex-wrap lg:flex-wrap lg:justify-between md:justify-between">
 			{#each categories as catergory}
 				<li>
 					<a
-						class="dark:hover:text-lime-700 hover:text-teal-300 hover:underline text-lg duration-300"
+						class="dark:hover:text-sky-700 hover:text-sky-300 hover:underline text-lg duration-300"
 						href={`#${catergory}`}>{catergory[0].toUpperCase() + catergory.slice(1)} Commands</a
 					>
 				</li>
@@ -604,28 +603,15 @@
 	{#if toSearch == ''}
 		<div>
 			{#each categories as name}
-				<div
-					class="py-4 grid grid-cols-1 gap-2 hover:shadow-2xl shadow-green-600/50 hover:bg-green-600/4 duration-150"
-					id={name}
-				>
+				<div class="py-4 grid grid-cols-1 gap-2" id={name}>
 					<div
-						class="border-green-900  text-cyan-800 dark:text-emerald-500 text-2xl p-2 bg-green-500 dark:bg-slate-900 rounded-lg border-2"
+						class="border-sky-900  text-blue-800 dark:text-sky-500 text-2xl p-2 bg-sky-500 dark:bg-sky-900 rounded-lg border-2"
 					>
 						{name[0].toUpperCase() + name.slice(1)} Commands
 					</div>
 					<div class="grid grid-cols-1 gap-4">
-						{#each commandlist.filter((x) => x.c === name) as command}
-							<div
-								class="bg-teal-500 dark:bg-teal-900 border-green-900 text-emerald-100 dark:text-lime-200 p-4 rounded-lg border-2"
-							>
-								<p class="text-xl" id={command.n.join('-')}>
-									{command.s}
-								</p>
-
-								<p class="text-emerald-800 dark:text-lime-300 text-lg">
-									{command.d || ''}
-								</p>
-							</div>
+						{#each commandlist.filter((x) => x.c === name).map((x) => ({ d: '', ...x })) as command}
+							<CommandItem {...command} />
 						{/each}
 					</div>
 				</div>
@@ -638,24 +624,7 @@
 		<div class="pt-4" />
 		<div class="grid grid-cols-1 gap-4">
 			{#each searchResult as command}
-				<div
-					class="bg-teal-500 dark:bg-teal-900 border-green-900 text-emerald-100 dark:text-lime-200 p-4 rounded-lg border-2"
-				>
-					<span class="text-xl" id={command.n.join('-')}>
-						<p>
-							{command.s}
-						</p>
-					</span>
-					<span class="text-right">
-						<p class="leading-[0px]">
-							{command.c}
-						</p>
-					</span>
-
-					<p class="text-emerald-800 dark:text-lime-300 text-lg">
-						{command.d || ''}
-					</p>
-				</div>
+				<CommandItem {...command} category={command.c} />
 			{/each}
 		</div>
 	{/if}
