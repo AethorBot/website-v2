@@ -9,10 +9,17 @@
 	export const router = false;
 	let commandlist = [
 		{
+			n: ['prefix', 'set'],
+			d: "set Aethor's prefix",
+			s: '*prefix set [prefix]',
+			a: ['set'],
+			c: 'config'
+		},
+		{
 			n: ['configs'],
 			d: 'view the configs of Aethor',
 			s: '*configs ',
-			a: ['configs', 'pf'],
+			a: ['configs'],
 			c: 'config'
 		},
 		{
@@ -23,49 +30,29 @@
 			c: 'config'
 		},
 		{
-			n: ['prefix', 'set'],
-			d: "set Aethor's prefix",
-			s: '*prefix set [prefix]',
-			a: ['set'],
+			n: ['disable'],
+			d: 'Disable or Enable a command',
+			s: '*disable [command]',
+			a: ['disable'],
 			c: 'config'
 		},
+		{ n: ['math', 'easy'], d: 'easy math question', s: '*math easy ', a: ['easy'], c: 'fun' },
 		{
-			n: ['autopublish'],
-			d: 'Automatically publish messages',
-			s: '*autopublish <channel>',
-			a: ['autopublish', 'publish'],
-			c: 'general'
+			n: ['math', 'impossible'],
+			d: 'impossible math question',
+			s: '*math impossible ',
+			a: ['impossible'],
+			c: 'fun'
 		},
 		{
-			n: ['avatar'],
-			d: 'View the avatar of a user',
-			s: '*avatar <member>',
-			a: ['av', 'avatar'],
-			c: 'general'
+			n: ['math', 'normal'],
+			d: 'normal math question',
+			s: '*math normal ',
+			a: ['normal'],
+			c: 'fun'
 		},
 		{
-			n: ['help'],
-			d: 'Aethor Help Command',
-			s: '*help <command>',
-			a: ['ls', 'h'],
-			c: 'general'
-		},
-		{
-			n: ['invite'],
-			d: 'Invite Aethor to your server',
-			s: '*invite ',
-			a: ['invite'],
-			c: 'general'
-		},
-		{
-			n: ['support'],
-			d: 'Support server :)',
-			s: '*support ',
-			a: ['support'],
-			c: 'general'
-		},
-		{
-			n: ['8ball'],
+			n: [null],
 			d: 'Ask a question for the magic 8ball to answer',
 			s: '*8ball <question>',
 			a: ['8ball', 'itriedmybest', 'mok'],
@@ -84,27 +71,6 @@
 			d: 'Do some math',
 			s: '*math <easy> <normal> <hard> <impossible>',
 			a: ['math'],
-			c: 'fun'
-		},
-		{
-			n: ['math', 'easy'],
-			d: 'easy math question',
-			s: '*math easy ',
-			a: ['easy'],
-			c: 'fun'
-		},
-		{
-			n: ['math', 'impossible'],
-			d: 'impossible math question',
-			s: '*math impossible ',
-			a: ['impossible'],
-			c: 'fun'
-		},
-		{
-			n: ['math', 'normal'],
-			d: 'normal math question',
-			s: '*math normal ',
-			a: ['normal'],
 			c: 'fun'
 		},
 		{ n: ['blame'], d: 'Blame someone', s: '*blame [text]', a: ['blame'], c: 'fun' },
@@ -145,6 +111,29 @@
 			c: 'information'
 		},
 		{
+			n: ['autopublish'],
+			d: 'Automatically publish messages',
+			s: '*autopublish <channel>',
+			a: ['autopublish', 'publish'],
+			c: 'general'
+		},
+		{
+			n: ['avatar'],
+			d: 'View the avatar of a user',
+			s: '*avatar <member>',
+			a: ['av', 'avatar'],
+			c: 'general'
+		},
+		{ n: ['help'], d: 'Aethor Help Command', s: '*help <command>', a: ['ls', 'h'], c: 'general' },
+		{
+			n: ['invite'],
+			d: 'Invite Aethor to your server',
+			s: '*invite ',
+			a: ['invite'],
+			c: 'general'
+		},
+		{ n: ['support'], d: 'Support server :)', s: '*support ', a: ['support'], c: 'general' },
+		{
 			n: ['ban'],
 			d: 'Ban users from your server',
 			s: '*ban [user] <reason> <deletemessages>',
@@ -156,6 +145,13 @@
 			d: 'clearlogs a user',
 			s: '*clearlogs [user]',
 			a: ['clearlogs', 'clearwarns'],
+			c: 'moderation'
+		},
+		{
+			n: ['kick'],
+			d: 'Kick users from your server',
+			s: '*kick [user] <reason>',
+			a: ['kick', 'yeet'],
 			c: 'moderation'
 		},
 		{
@@ -235,13 +231,7 @@
 			a: ['reason', 'reson'],
 			c: 'moderation'
 		},
-		{
-			n: ['role'],
-			d: 'Give a user a role',
-			s: '*role <user> <role>',
-			a: ['role'],
-			c: 'moderation'
-		},
+		{ n: [null], d: 'Give a user a role', s: '*role <user> <role>', a: ['role'], c: 'moderation' },
 		{
 			n: ['slowmode'],
 			d: 'Set the slowmode of a channel',
@@ -249,27 +239,7 @@
 			a: ['slowmode', 'sm'],
 			c: 'moderation'
 		},
-		{
-			n: ['warn'],
-			d: 'warn a user',
-			s: '*warn [user] <reason>',
-			a: ['warn'],
-			c: 'moderation'
-		},
-		{
-			n: ['kick'],
-			d: 'Kick users from your server',
-			s: '*kick [user] <reason>',
-			a: ['kick', 'yeet'],
-			c: 'moderation'
-		},
-		{
-			n: ['suggestion'],
-			d: 'Entry point for the suggestions commands',
-			s: '*suggestion <of> <deny> <edit> <view> <channel> <comment> <deniedchannel> <accept> <acomment> <chart> <top> <restore> <silentdelete> <acceptedchannel> <emojis> <suggest> <down> <suggestions> <startthreadbutton> <search>',
-			a: ['suggestion', 'suggestioninfo', 'sug', 's'],
-			c: 'suggestions'
-		},
+		{ n: ['warn'], d: 'warn a user', s: '*warn [user] <reason>', a: ['warn'], c: 'moderation' },
 		{
 			n: ['suggestion', 'accept'],
 			d: 'Accept a suggestions',
@@ -292,10 +262,23 @@
 			c: 'suggestions'
 		},
 		{
+			n: ['suggestion', 'blacklist'],
+			s: '*suggestion blacklist [user]',
+			a: ['blacklist'],
+			c: 'suggestions'
+		},
+		{
+			n: ['suggestion', 'channel'],
+			d: 'Set the channel suggestions will be send in',
+			s: '*suggestion channel <channel>',
+			a: ['suggestionschannel', 'channel', 'suggestionschannel', 'suggestionchannel'],
+			c: 'suggestions'
+		},
+		{
 			n: ['suggestion', 'chart'],
 			d: 'Displays the suggestions made per day',
 			s: '*suggestion chart ',
-			a: ['chart'],
+			a: ['chart', 'graph'],
 			c: 'suggestions'
 		},
 		{
@@ -369,10 +352,24 @@
 			c: 'suggestions'
 		},
 		{
+			n: ['suggestion', 'suggest'],
+			d: 'Suggest something',
+			s: '*suggestion suggest [suggestion]',
+			a: ['suggest', 'create'],
+			c: 'suggestions'
+		},
+		{
 			n: ['suggestion', 'suggestions'],
 			d: 'Displays the top suggestions in this guild',
 			s: '*suggestion suggestions [suggestions]',
 			a: ['suggestions', 'list'],
+			c: 'suggestions'
+		},
+		{
+			n: ['suggestion', 'of'],
+			d: 'View the cool suggestions other users have made',
+			s: '*suggestion of [user]',
+			a: ['suggestionsof', 'my', 'of'],
 			c: 'suggestions'
 		},
 		{
@@ -389,32 +386,13 @@
 			c: 'suggestions'
 		},
 		{
-			n: ['suggestion', 'blacklist'],
-			s: '*suggestion blacklist [user]',
-			a: ['blacklist'],
+			n: ['suggestion'],
+			d: 'Entry point for the suggestions commands',
+			s: '*suggestion <of> <deny> <edit> <view> <channel> <comment> <deniedchannel> <accept> <acomment> <chart> <top> <restore> <silentdelete> <acceptedchannel> <emojis> <suggest> <down> <suggestions> <startthreadbutton> <search>',
+			a: ['suggestion', 'suggestioninfo', 'sug', 's'],
 			c: 'suggestions'
 		},
-		{
-			n: ['suggestion', 'channel'],
-			d: 'Set the channel suggestions will be send in',
-			s: '*suggestion channel <channel>',
-			a: ['suggestionschannel', 'channel', 'suggestionschannel', 'suggestionchannel'],
-			c: 'suggestions'
-		},
-		{
-			n: ['suggestion', 'suggest'],
-			d: 'Suggest something',
-			s: '*suggestion suggest [suggestion]',
-			a: ['suggest', 'create'],
-			c: 'suggestions'
-		},
-		{
-			n: ['suggestion', 'of'],
-			d: 'View the cool suggestions other users have made',
-			s: '*suggestion of [user]',
-			a: ['suggestionsof', 'my', 'of'],
-			c: 'suggestions'
-		},
+		{ n: [null], s: '*yeetkid <member>', a: ['yeetkid', 'removekid'], c: 'threads' },
 		{
 			n: ['supportping'],
 			d: 'Set a role to be pinged on every support thread',
@@ -428,35 +406,6 @@
 			s: '*threadsupport <thread>',
 			a: ['threadsupport', 'threadsup', 'supportthread'],
 			c: 'threads'
-		},
-		{ n: ['yeetkid'], s: '*yeetkid <member>', a: ['yeetkid', 'removekid'], c: 'threads' },
-		{
-			n: ['piratechannel'],
-			d: 'no please noooooooooooO!',
-			s: '*piratechannel ',
-			a: ['piratechannel'],
-			c: 'vip'
-		},
-		{
-			n: ['quote'],
-			d: 'quote a message',
-			s: '*quote <link>',
-			a: ['quote', 'qt'],
-			c: 'vip'
-		},
-		{
-			n: ['buttonroles'],
-			d: 'Button reaction roles',
-			s: '*buttonroles <roles>',
-			a: ['buttonroles', 'reactionroles', 'rr', 'br'],
-			c: 'vip'
-		},
-		{
-			n: ['tag'],
-			d: 'Display a tag',
-			s: '*tag <all> <raw> <dtag> <view> <delete> <add>',
-			a: ['tag', 't', 'addtag', 'tags'],
-			c: 'vip'
 		},
 		{
 			n: ['tag', 'add'],
@@ -486,18 +435,34 @@
 			a: ['rawtag', 'raw'],
 			c: 'vip'
 		},
-		{
-			n: ['tag', 'view'],
-			d: 'Shows a tag',
-			s: '*tag view <tag>',
-			a: ['tag', 'view'],
-			c: 'vip'
-		},
+		{ n: ['tag', 'view'], d: 'Shows a tag', s: '*tag view <tag>', a: ['tag', 'view'], c: 'vip' },
 		{
 			n: ['tag', 'all'],
 			d: 'Displays the tags in this server',
 			s: '*tag all ',
 			a: ['tags', 'all', 'list'],
+			c: 'vip'
+		},
+		{
+			n: ['piratechannel'],
+			d: 'no please noooooooooooO!',
+			s: '*piratechannel ',
+			a: ['piratechannel'],
+			c: 'vip'
+		},
+		{ n: ['quote'], d: 'quote a message', s: '*quote <link>', a: ['quote', 'qt'], c: 'vip' },
+		{
+			n: ['buttonroles'],
+			d: 'Button reaction roles',
+			s: '*buttonroles <roles>',
+			a: ['buttonroles', 'reactionroles', 'rr', 'br'],
+			c: 'vip'
+		},
+		{
+			n: ['tag'],
+			d: 'Display a tag',
+			s: '*tag <all> <raw> <dtag> <view> <delete> <add>',
+			a: ['tag', 't', 'addtag', 'tags'],
 			c: 'vip'
 		},
 		{
@@ -515,22 +480,25 @@
 			c: 'vip'
 		},
 		{
-			n: ['report'],
-			d: 'Report a malicous user',
-			s: '*report [user] [reason] [evidence]',
-			a: ['report'],
-			c: 'malware'
-		},
-		{ n: ['list'], d: 'List reported users', s: '*list ', a: ['list'], c: 'malware' },
-		{
 			n: ['feed'],
 			d: 'Sends a message in your server when someone has gotten reported',
 			s: '*feed <channel>',
 			a: ['feed'],
 			c: 'malware'
+		},
+		{ n: ['list'], d: 'List reported users', s: '*list ', a: ['list'], c: 'malware' },
+		{
+			n: ['report'],
+			d: 'Report a malicous user',
+			s: '*report [user] [reason] [evidence]',
+			a: ['report'],
+			c: 'malware'
 		}
-	];
+	] as const;
+
 	const categories = Array.from(new Set(commandlist.map((x) => x.c)));
+
+	let category = 'suggestions';
 	const search = new Fuse(commandlist, {
 		keys: [
 			'n',
@@ -590,31 +558,37 @@
 	<div class="pt-4" />
 	<div class="dark:text-sky-300 text-sky-900 text-lg border-2 border-sky-300 p-4 rounded-sm">
 		<ul class="md:flex lg:flex md:flex-wrap lg:flex-wrap lg:justify-between md:justify-between">
-			{#each categories as catergory}
+			{#each categories as cate}
 				<li>
-					<a
-						class="dark:hover:text-sky-700 hover:text-sky-300 hover:underline text-lg duration-300"
-						href={`#${catergory}`}>{catergory[0].toUpperCase() + catergory.slice(1)} Commands</a
+					<button
+						class={`dark:hover:text-sky-700 hover:text-sky-300 text-lg duration-300 border-b-2 ${
+							cate == category ? 'border-red-700 text-red-700' : 'border-sky-600'
+						}`}
+						on:click={() => {
+							toSearch = '';
+							category = cate;
+						}}>{cate[0].toUpperCase() + cate.slice(1)} Commands</button
 					>
 				</li>
 			{/each}
 		</ul>
 	</div>
+
 	{#if toSearch == ''}
-		<div>
-			{#each categories as name}
-				<div class="py-4 grid grid-cols-1 gap-2" id={name}>
+		<div class="grid grid-cols-1 gap-4 py-2">
+			{#each commandlist.filter((x) => x.c == category) as command}
+				<!-- <div class="py-4 grid grid-cols-1 gap-2" id={name}>
 					<div
 						class="border-sky-900  text-blue-800 dark:text-sky-500 text-2xl p-2 bg-sky-500 dark:bg-sky-900 rounded-lg border-2"
 					>
 						{name[0].toUpperCase() + name.slice(1)} Commands
 					</div>
 					<div class="grid grid-cols-1 gap-4">
-						{#each commandlist.filter((x) => x.c === name).map((x) => ({ d: '', ...x })) as command}
-							<CommandItem {...command} />
-						{/each}
+						{#each commandlist.filter((x) => x.c === name).map((x) => ({ d: '', ...x })) as command} -->
+				<CommandItem {...command} />
+				<!-- {/each}
 					</div>
-				</div>
+				</div> -->
 			{/each}
 		</div>
 	{:else if searchResult.length === 0}

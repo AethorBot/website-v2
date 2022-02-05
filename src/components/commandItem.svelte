@@ -2,7 +2,7 @@
 	export let category = undefined;
 	export let n;
 	export let s;
-	export let d;
+	export let d = '';
 </script>
 
 <div
@@ -23,6 +23,6 @@
 	{/if}
 
 	<p class="text-sky-800 dark:text-blue-300 text-lg">
-		{d || ''}
+		{d}
 	</p>
 </div>

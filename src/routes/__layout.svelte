@@ -42,7 +42,7 @@
 	];
 </script>
 
-<nav class="w-full gap-2 bg-sky-600 dark:bg-sky-900 dark:text-sky-200 p-4 text-sky-200 flex">
+<nav class="w-full gap-2 bg-sky-600 dark:bg-slate-900 dark:text-sky-200 p-4 text-sky-200 flex">
 	{#each buttons as button}
 		<a
 			href={button.l}
