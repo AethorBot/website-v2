@@ -42,17 +42,19 @@
 	];
 </script>
 
-<nav class="w-full gap-2 bg-sky-600 dark:bg-slate-900 dark:text-sky-200 p-4 text-sky-200 flex">
+<nav
+	class="w-full gap-2 bg-sky-600 dark:bg-slate-900 dark:text-sky-200 p-4 text-sky-200 flex flex-col md:flex-row"
+>
 	{#each buttons as button}
 		<a
 			href={button.l}
-			class="hover:border-sky-900 hover:rounded-xl duration-300 p-2 text-lg border-2 border-sky-500 rounded-md"
+			class="hover:border-sky-900 hover:rounded-xl duration-300 py-1 px-2 text-lg border-2 border-sky-500 rounded-md"
 			>{button.n}</a
 		>
 	{/each}
 
 	<button
-		class="last:ml-auto p-2 text-lg border-2 border-sky-500 rounded-md dark:hover:text-sky-600 hover:text-sky-900 duration-200"
+		class="last:ml-auto py-1 px-2 text-lg border-2 border-sky-500 rounded-md dark:hover:text-sky-600 hover:text-sky-900 duration-200"
 		on:click={theme}>Change theme</button
 	>
 </nav>

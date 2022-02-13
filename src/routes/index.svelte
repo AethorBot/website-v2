@@ -32,7 +32,7 @@
 	];
 </script>
 
-<Paragraph>
+<Paragraph center full>
 	<h2>Welcome to the aethor website</h2>
 	<p class="italic">The best suggestions bot</p>
 </Paragraph>
@@ -45,11 +45,15 @@
 			}`}
 		>
 			<div class="m-auto p-1">
-				<h3 class="text-7xl text-sky-700">{feature.name}</h3>
-				<p class="text-2xl dark:text-sky-500 text-blue-800">{feature.description}</p>
+				<h3 class="md:text-7xl text-2xl text-sky-700">{feature.name}</h3>
+				<p class="md:text-2xl text-lg dark:text-sky-500 text-blue-800">{feature.description}</p>
 			</div>
 			<div class="m-auto p-1">
-				<img class="h-96 object-cover" alt={feature.name} src={`/features/${feature.image}`} />
+				<img
+					class="md:h-96 md:object-cover w-auto h-auto"
+					alt={feature.name}
+					src={`/features/${feature.image}`}
+				/>
 			</div>
 		</div>
 	{/each}
