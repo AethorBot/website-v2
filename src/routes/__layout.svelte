@@ -38,6 +38,10 @@
 		{
 			l: '/commands',
 			n: 'Commands'
+		},
+		{
+			l: '/roles',
+			n: 'Button Roles'
 		}
 	];
 </script>
@@ -54,7 +58,7 @@
 	{/each}
 
 	<button
-		class="last:ml-auto py-1 px-2 text-lg border-2 border-sky-500 rounded-md dark:hover:text-sky-600 hover:text-sky-900 duration-200"
+		class="md:last:ml-auto py-1 px-2 text-lg border-2 border-sky-500 rounded-md dark:hover:text-sky-600 hover:text-sky-900 duration-200"
 		on:click={theme}>Change theme</button
 	>
 </nav>
