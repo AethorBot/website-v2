@@ -21,6 +21,10 @@
 </script>
 
 <div class="grid gap-4 justify-center">
+	<label class="container break-words w-96 bg-gray-100 p-2 rounded-md">
+		<input type="checkbox" checked={true} on:change={() => (data.dropdown = !data.dropdown)} />
+		Dropdown?
+	</label>
 	<div>
 		<input
 			value={data.title}
