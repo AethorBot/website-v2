@@ -15,8 +15,6 @@ const config = {
 	kit: {
 		adapter: adapter({ split: false }),
 
-		// hydrate the <div id="svelte"> element in src/app.html
-		target: '#main',
 		vite: {
 			plugins: [VitePWA(pwaConfiguration)]
 		}
