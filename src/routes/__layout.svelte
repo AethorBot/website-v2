@@ -1,6 +1,5 @@
 <script>
 	import '@fontsource/aldrich';
-	import Addbutton from '../components/addbutton.svelte';
 	import { onMount } from 'svelte';
 	import '../app.css';
 	import Paragraph from '../components/paragraph.svelte';
@@ -26,6 +25,10 @@
 		{
 			l: '/',
 			n: 'Home'
+		},
+		{
+			l: 'https://aethor.tricked.pro/',
+			n: 'Wiki'
 		},
 		{
 			l: '/privacy',
@@ -75,7 +78,4 @@
 			<a href="https://discord.gg/zwUQGAG4cP">Support/Discord</a>
 		</p>
 	</Paragraph>
-	<div class="p-2">
-		<Addbutton />
-	</div>
 </footer>
