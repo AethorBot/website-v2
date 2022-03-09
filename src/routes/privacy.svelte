@@ -10,13 +10,13 @@
 <Paragraph>
 	<h1>Aethor privacy policy</h1>
 	<h2>What data do we collect and when</h2>
-	<h3>When you create a suggestion</h3>
+	<h3 id="suggestion-create">When you create a suggestion</h3>
 	<ul>
 		<li><p>Your discord id</p></li>
 		<li><p>The server the suggestion was made in</p></li>
 		<li><p>Message content</p></li>
 	</ul>
-	<h3>When you vote on a suggestion</h3>
+	<h3 id="suggestion-vote">When you vote on a suggestion</h3>
 	<ul>
 		<li><p>Your discord id</p></li>
 	</ul>
