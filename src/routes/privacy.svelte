@@ -9,12 +9,26 @@
 
 <Paragraph>
 	<h1>Aethor privacy policy</h1>
-	<h2>What data do we collect</h2>
+	<h2>What data do we collect and when</h2>
+	<h3>When you create a suggestion</h3>
 	<ul>
 		<li><p>Your discord id</p></li>
-		<li><p>Your discord server id</p></li>
+		<li><p>The server the suggestion was made in</p></li>
+		<li><p>Message content</p></li>
 	</ul>
-
+	<h3>When you vote on a suggestion</h3>
+	<ul>
+		<li><p>Your discord id</p></li>
+	</ul>
+	<h3>When you run the iq command</h3>
+	<ul>
+		<li><p>Your discord id</p></li>
+	</ul>
+	<h3>When you get a infraction</h3>
+	<ul>
+		<li><p>Your discord id</p></li>
+		<li><p>The server id that infraction was made in</p></li>
+	</ul>
 	<h2>Why we store the information and how we use it.</h2>
 	<ul>
 		<li><p>To keep track of infractions</p></li>
@@ -32,7 +46,7 @@
 			>https://discord.gg/zwUQGAG4cP</a
 		>
 	</p>
-	<h2>How to remove your data</h2>
+	<h2>How do i get my data deleted?</h2>
 	<p>
 		email tricked@duck.com or contact me via my discord <a
 			href="https://discord.gg/zwUQGAG4cP"

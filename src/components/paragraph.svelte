@@ -6,7 +6,6 @@
 <article
 	class={`p-4
     prose
-    lg:prose-xl
     prose-teal
     dark:prose-invert
     prose-headings:text-sky-900
