@@ -1,5 +1,4 @@
 <script>
-	import '@fontsource/aldrich';
 	import { onMount } from 'svelte';
 	import '../app.css';
 	import Paragraph from '../components/paragraph.svelte';
@@ -50,18 +49,18 @@
 </script>
 
 <nav
-	class="w-full gap-2 bg-sky-600 dark:bg-slate-900 dark:text-sky-200 p-4 text-sky-200 flex flex-col md:flex-row"
+	class="w-full gap-2 bg-zinc-500 dark:bg-zinc-900 dark:text-zinc-200 p-4 text-sky-200 flex flex-col md:flex-row"
 >
 	{#each buttons as button}
 		<a
 			href={button.l}
-			class="hover:border-sky-900 hover:rounded-xl duration-300 py-1 px-2 text-lg border-2 border-sky-500 rounded-md"
+			class="dark:hover:bg-zinc-700 duration-150 py-1 px-2 text-lg rounded-lg"
 			>{button.n}</a
 		>
 	{/each}
 
 	<button
-		class="md:last:ml-auto py-1 px-2 text-lg border-2 border-sky-500 rounded-md dark:hover:text-sky-600 hover:text-sky-900 duration-200"
+		class="md:last:ml-auto dark:hover:bg-zinc-700 duration-150 py-1 px-2 text-lg rounded-lg"
 		on:click={theme}>Change theme</button
 	>
 </nav>
