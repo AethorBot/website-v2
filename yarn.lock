@@ -1891,9 +1891,9 @@
   "resolved" "https://registry.npmjs.org/es6-promise/-/es6-promise-3.3.1.tgz"
   "version" "3.3.1"
 
-"esbuild-windows-64@0.14.38":
-  "integrity" "sha512-Khy4wVmebnzue8aeSXLC+6clo/hRYeNIm0DyikoEqX+3w3rcvrhzpoix0S+MF9vzh6JFskkIGD7Zx47ODJNyCw=="
-  "resolved" "https://registry.npmjs.org/esbuild-windows-64/-/esbuild-windows-64-0.14.38.tgz"
+"esbuild-darwin-arm64@0.14.38":
+  "integrity" "sha512-eqF+OejMI3mC5Dlo9Kdq/Ilbki9sQBw3QlHW3wjLmsLh+quNfHmGMp3Ly1eWm981iGBMdbtSS9+LRvR2T8B3eQ=="
+  "resolved" "https://registry.npmjs.org/esbuild-darwin-arm64/-/esbuild-darwin-arm64-0.14.38.tgz"
   "version" "0.14.38"
 
 "esbuild@^0.14.21", "esbuild@^0.14.27":
@@ -2155,6 +2155,11 @@
   "resolved" "https://registry.npmjs.org/flatted/-/flatted-3.2.4.tgz"
   "version" "3.2.4"
 
+"focus-options-polyfill@^1.6.0":
+  "integrity" "sha512-uyrAmLZrPnUItQY5wTdg31TO9GGZRGsh/jmohUg9oLmLi/sw5y7LlTV/mwyd6rvbxIOGwmRiv6LcTS8w7Bk9NQ=="
+  "resolved" "https://registry.npmjs.org/focus-options-polyfill/-/focus-options-polyfill-1.6.0.tgz"
+  "version" "1.6.0"
+
 "fraction.js@^4.1.2":
   "integrity" "sha512-pUHWWt6vHzZZiQJcM6S/0PXfS+g6FM4BF5rj9wZyreivhQPdsh5PpE25VtSNxq80wHS5RfY51Ii+8Z0Zl/pmzg=="
   "resolved" "https://registry.npmjs.org/fraction.js/-/fraction.js-4.1.3.tgz"
@@ -2174,6 +2179,11 @@
   "integrity" "sha1-FQStJSMVjKpA20onh8sBQRmU6k8="
   "resolved" "https://registry.npmjs.org/fs.realpath/-/fs.realpath-1.0.0.tgz"
   "version" "1.0.0"
+
+"fsevents@~2.3.2":
+  "integrity" "sha512-xiqMQR4xAeHTuB9uWm+fFRcIOgKBMiOBP+eXiyT7jsgVCq1bkVygt00oASowB7EdtpOHaaPgKt812P9ab+DDKA=="
+  "resolved" "https://registry.npmjs.org/fsevents/-/fsevents-2.3.2.tgz"
+  "version" "2.3.2"
 
 "function-bind@^1.1.1":
   "integrity" "sha512-yIovAzMX49sF8Yl58fSCWJ5svSLuaibPxXQJFLmBObTuCr0Mf1KiPopGM9NiFjiYBCbfaa2Fh6breQ6ANVTI0A=="
@@ -3597,6 +3607,13 @@
   "integrity" "sha512-VffsN0fT4cTJ7b4apf9VDIrgsbLFaJzPypcAuy4NcHx2PKKayfwLwabaYPWdHK5lJ/uQ/HBrkEsWHzo64NU6mQ=="
   "resolved" "https://registry.npmjs.org/svelte-hmr/-/svelte-hmr-0.14.10.tgz"
   "version" "0.14.10"
+
+"svelte-parallax@^0.5.2":
+  "integrity" "sha512-LrO9Rh8jZQxGes2/Rp+zKxKHm4IEwNdDoNrAheY04UJUi1RTugBrYf+MImwlsuauwRGuokdyG7CVHTrMFc+8pQ=="
+  "resolved" "https://registry.npmjs.org/svelte-parallax/-/svelte-parallax-0.5.2.tgz"
+  "version" "0.5.2"
+  dependencies:
+    "focus-options-polyfill" "^1.6.0"
 
 "svelte-preprocess@^4.0.0", "svelte-preprocess@^4.10.1":
   "integrity" "sha512-fuwol0N4UoHsNQolLFbMqWivqcJ9N0vfWO9IuPAiX/5okfoGXURyJ6nECbuEIv0nU3M8Xe2I1ONNje2buk7l6A=="

@@ -2,7 +2,7 @@
 	"name": "aethorsite",
 	"version": "0.0.1",
 	"scripts": {
-		"dev": "svelte-kit dev",
+		"dev": "npx svelte-kit dev",
 		"build": "svelte-kit build  && node ./pwa.js",
 		"package": "svelte-kit package",
 		"preview": "svelte-kit preview",
@@ -41,5 +41,7 @@
 		"vite-plugin-pwa": "^0.11.12"
 	},
 	"type": "module",
-	"dependencies": {}
+	"dependencies": {
+		"svelte-parallax": "^0.5.2"
+	}
 }
