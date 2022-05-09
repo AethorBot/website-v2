@@ -7,5 +7,13 @@ html {
 }
 
 body {
-	@apply bg-sky-200 dark:bg-slate-800 scrollbar scrollbar-thumb-blue-600 scrollbar-track-blue-700 dark:scrollbar-thumb-blue-900 dark:scrollbar-track-blue-800 scrollbar-w-2;
+	@apply bg-slate-300 dark:bg-slate-900 scrollbar scrollbar-thumb-zinc-600 scrollbar-track-zinc-700 dark:scrollbar-thumb-zinc-900 dark:scrollbar-track-zinc-800 scrollbar-w-2;
+}
+
+#download:not(:hover) {
+	@apply bg-clip-text text-transparent bg-gradient-to-r from-pink-500 to-violet-500
+}
+
+#download:hover {
+	@apply bg-gradient-to-r from-pink-500 to-violet-500
 }
