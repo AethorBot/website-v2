@@ -76,7 +76,7 @@
 	<ParallaxLayer offset={features.length+4}>
 		<div class="flex justify-center">
 			<a
-				class={'hover:text-teal-100 bg-blue-800 text-white border-blue-900 border-4 p-4 text-2xl hover:bg-sky-800 hover:border-sky-900 duration-200 md:duration-700 text-center bg-blue hover:bg-blue-light font-bold py-2 px-4 border-b-4 border-blue-dark hover:border-blue rounded'}
+				class={'text-white p-4 text-2xl hover:bg-sky-800 duration-150 text-center font-bold py-2 px-4 rounded'}
 				href="https://discord.com/oauth2/authorize?client_id=870383692403593226&permissions=117824&scope=bot%20applications.commands"
 				target="_blank"
 				id="download"
