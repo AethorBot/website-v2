@@ -36,7 +36,7 @@
 	console.log(features.length+1)
 </script>
 
-<Parallax sections={features.length + 7} config={{stiffness: 0.2, damping: 1}} sectionHeight={200}>
+<Parallax sections={features.length + 5} config={{stiffness: 0.2, damping: 1}} sectionHeight={200}>
 	<ParallaxLayer rate={0.5} span={2}>
 		<div class="py-72 bg-gradient-to-b from-zinc-300 to-slate-300 dark:from-zinc-900 dark:to-slate-900">
 			<div class="text-center">
@@ -73,7 +73,7 @@
 		</ParallaxLayer>
 	{/each}
 
-	<ParallaxLayer offset={features.length+4}>
+	<ParallaxLayer offset={features.length+3}>
 		<div class="flex justify-center">
 			<a
 				class={'text-white p-4 text-2xl hover:bg-sky-800 duration-150 text-center font-bold py-2 px-4 rounded'}
