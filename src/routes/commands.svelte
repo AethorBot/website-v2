@@ -52,7 +52,7 @@
 			c: 'fun'
 		},
 		{
-			n: [null],
+			n: ['8ball'],
 			d: 'Ask a question for the magic 8ball to answer',
 			s: '*8ball <question>',
 			a: ['8ball', 'itriedmybest', 'mok'],
@@ -231,7 +231,13 @@
 			a: ['reason', 'reson'],
 			c: 'moderation'
 		},
-		{ n: [null], d: 'Give a user a role', s: '*role <user> <role>', a: ['role'], c: 'moderation' },
+		{
+			n: ['role'],
+			d: 'Give a user a role',
+			s: '*role <user> <role>',
+			a: ['role'],
+			c: 'moderation'
+		},
 		{
 			n: ['slowmode'],
 			d: 'Set the slowmode of a channel',
@@ -392,7 +398,7 @@
 			a: ['suggestion', 'suggestioninfo', 'sug', 's'],
 			c: 'suggestions'
 		},
-		{ n: [null], s: '*yeetkid <member>', a: ['yeetkid', 'removekid'], c: 'threads' },
+		{ n: ['yeetkid'], s: '*yeetkid <member>', a: ['yeetkid', 'removekid'], c: 'threads' },
 		{
 			n: ['supportping'],
 			d: 'Set a role to be pinged on every support thread',

@@ -1,6 +1,5 @@
 <script lang="ts">
-	import { encode, decode } from '@msgpack/msgpack';
-	import { dataset_dev } from 'svelte/internal';
+	import { encode } from '@msgpack/msgpack';
 
 	interface ButtonRole {
 		dropdown: boolean;
