@@ -13,7 +13,7 @@ const config = {
 	preprocess: [preprocess({}), mdsvex(mdsvexConfig)],
 
 	kit: {
-		adapter: adapter({ split: false }),
+		adapter: adapter({}),
 
 		vite: {
 			plugins: [VitePWA(pwaConfiguration)]
