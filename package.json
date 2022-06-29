@@ -15,7 +15,7 @@
 		"@fontsource/aldrich": "^4.5.0",
 		"@msgpack/msgpack": "^2.7.2",
 		"@sveltejs/adapter-auto": "^1.0.0-next.17",
-		"@sveltejs/adapter-netlify": "^1.0.0-next.37",
+		"@sveltejs/adapter-netlify": "^1.0.0-next.65",
 		"@sveltejs/kit": "^1.0.0-next.212",
 		"@tailwindcss/typography": "^0.5.0",
 		"@typescript-eslint/eslint-plugin": "^4.31.1",
