@@ -1,0 +1,18 @@
+{
+  "orientation": "any",
+  "name": "Aethor Website",
+  "short_name": "Aethor",
+  "start_url": "/",
+  "description": "Aethor Website and more",
+  "background_color": "#191D24",
+  "theme_color": "#06283D",
+  "display": "standalone",
+  "icons": [
+    {
+      "src": "favicon.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any maskable"
+    }
+  ]
+}
