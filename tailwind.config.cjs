@@ -13,7 +13,8 @@ const config = {
 		'inline-block',
 		'align-middle',
 		'relative',
-		'-mt-1'
+		'-mt-1',
+		'animate-pulse-slow'
 	],
 	theme: {
 		extend: {

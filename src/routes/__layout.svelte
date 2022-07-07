@@ -38,9 +38,7 @@
 </script>
 
 <div class="min-h-screen">
-	<nav
-		class="w-full gap-2 bg-zinc-300 dark:bg-zinc-900 dark:text-zinc-200 p-4 text-slate-900 flex flex-col md:flex-row"
-	>
+	<nav class="w-full gap-2 bg-zinc-900 text-zinc-200 p-4 flex flex-col md:flex-row">
 		{#each buttons as button}
 			<a
 				href={button.l}

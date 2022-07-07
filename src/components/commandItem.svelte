@@ -5,6 +5,7 @@
 	export let name = '';
 	export let options: APIApplicationCommand['options'] = [];
 	export let type: ApplicationCommandType;
+	export let types: ApplicationCommandType[] = [];
 	export let description = '';
 	export let premium = false;
 	let tool;
@@ -18,15 +19,28 @@
 				/{name}
 			</a>
 		</span>
-		<span class="badge rounded-sm ml-auto">
-			{type == ApplicationCommandType.ChatInput
-				? 'Slash'
-				: ApplicationCommandType.Message
-				? 'Message Context'
-				: 'User Context'}
-		</span>
+
+		{#if types.length != 0}
+			{#each types as type}
+				<span class="badge rounded-sm mx-1">
+					{type == ApplicationCommandType.ChatInput
+						? 'Slash'
+						: ApplicationCommandType.Message
+						? 'Message Context'
+						: 'User Context'}
+				</span>
+			{/each}
+		{:else}
+			<span class="badge rounded-sm mx-1">
+				{type == ApplicationCommandType.ChatInput
+					? 'Slash'
+					: ApplicationCommandType.Message
+					? 'Message Context'
+					: 'User Context'}
+			</span>
+		{/if}
 		{#if premium}
-			<span class="badge rounded-sm ml-auto badge-primary"> Premium </span>
+			<span class="badge rounded-sm mx-1 badge-primary"> Premium </span>
 		{/if}
 	</div>
 
@@ -35,7 +49,11 @@
 		{#if type == ApplicationCommandType.ChatInput}
 			<span>
 				<div class="flex gap-2">
-					<span>/{name}</span>
+					<span
+						><a href={`#${name}`}>
+							/{name}
+						</a></span
+					>
 					{#each options as x}
 						<button on:click={() => (tool == x.description ? (tool = '') : (tool = x.description))}
 							>{x.required ? `[${x.name}]` : `<${x.name}>`}</button

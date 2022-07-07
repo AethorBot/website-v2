@@ -74,6 +74,15 @@
             "description": "User to view suggestions for!",
             "required": false,
             "type": 6
+          },
+          {
+            "name": "page",
+            "description": "Amount of suggestions to display!",
+            "required": false,
+            "type": 10,
+            "autocomplete": false,
+            "minValue": 1,
+            "maxValue": 200
           }
         ]
       }
@@ -321,6 +330,28 @@
     "type": 1
   },
   {
+    "name": "suggestion-comment",
+    "description": "Comment on a suggestion",
+    "options": [
+      {
+        "name": "suggestion",
+        "description": "suggestion to comment on",
+        "required": true,
+        "type": 4,
+        "autocomplete": true
+      },
+      {
+        "name": "text",
+        "description": "text to commment",
+        "required": true,
+        "type": 3
+      }
+    ],
+    "dmPermission": false,
+    "defaultMemberPermissions": "134225920",
+    "type": 1
+  },
+  {
     "name": "tag",
     "description": "Tags related commands!",
     "options": [
@@ -487,6 +518,14 @@
     "options": [],
     "dmPermission": false,
     "defaultMemberPermissions": "134225920",
+    "type": 1,
+    "premium": true
+  },
+  {
+    "name": "tags",
+    "description": "shows all tags",
+    "options": [],
+    "dmPermission": false,
     "type": 1,
     "premium": true
   },
