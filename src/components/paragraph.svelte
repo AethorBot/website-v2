@@ -14,6 +14,9 @@
     dark:prose-p:text-blue-300
     prose-a:text-red-900
     dark:prose-a:text-red-500
+    prose-h3:m-0
+    prose-h2:my-4
+    prose-p:m-0
     ${center ? 'text-center' : ''}
     ${full ? 'max-w-none' : ''}
     `}

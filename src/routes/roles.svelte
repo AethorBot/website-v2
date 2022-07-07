@@ -31,14 +31,23 @@
 </script>
 
 <div class="grid gap-4 justify-center">
-	<label class="container break-words w-96 bg-gray-100 p-2 rounded-md">
-		<input type="checkbox" checked={true} on:change={() => (data.dropdown = !data.dropdown)} />
+	<label
+		class="container break-words w-96 p-2 rounded-md label cursor-pointer bg-base-200"
+		disabled
+	>
+		<input
+			type="checkbox"
+			class="checkbox checkbox-secondary"
+			checked={false}
+			disabled
+			on:change={() => (data.dropdown = !data.dropdown)}
+		/>
 		Dropdown?
 	</label>
 	<div>
 		<input
 			value={data.title}
-			class="bg-gray-100 p-2 rounded-md w-96"
+			class="p-2 rounded-md w-96 input input-bordered input-secondary bg-primary"
 			placeholder="Title"
 			on:change={(e) => {
 				//@ts-ignore
@@ -49,7 +58,7 @@
 	<div>
 		<textarea
 			value={data.description}
-			class="bg-gray-100 p-2 rounded-md w-96"
+			class="p-2 rounded-md w-96 input input-bordered input-secondary bg-primary"
 			placeholder="Description"
 			on:change={(e) => {
 				//@ts-ignore
@@ -60,14 +69,14 @@
 
 	<div class="w-auto grid gap-2">
 		{#if data.input.length != 0}
-			<p class="dark:text-cyan-100">Button/Field adjust as needed</p>
+			<p class="">Button/Field adjust as needed</p>
 		{/if}
 		{#each data.input as input, index}
 			<div class="w-auto grid gap-2">
 				<div class="flex gap-1 w-auto flex-col">
 					<input
 						value={input.text}
-						class="bg-gray-100 p-2 rounded-md w-auto"
+						class="bg-base-200 p-2 rounded-md w-auto input input-bordered input-secondary"
 						placeholder="Text"
 						on:input={(e) => {
 							//@ts-ignore
@@ -78,7 +87,7 @@
 				<div class="flex gap-1 w-auto flex-row">
 					<input
 						value={input.role}
-						class="bg-gray-100 p-2 rounded-md w-auto"
+						class="bg-base-200 p-2 rounded-md w-auto input input-bordered input-secondary"
 						placeholder="Role"
 						minlength={15}
 						maxlength={22}
@@ -89,7 +98,7 @@
 					/>
 					<div class="flex justify-center">
 						<button
-							class="dark:text-cyan-100 bg-orange-600 p-2 px-4 rounded-md ml-auto"
+							class="dark:text-cyan-100 bg-orange-600 p-2 px-4 rounded-md ml-auto btn"
 							on:click={() => {
 								data.input[index] = undefined;
 								data.input = data.input.filter((x) => x);
@@ -101,7 +110,7 @@
 		{/each}
 	</div>
 	<button
-		class="bg-gray-100 p-2 rounded-md"
+		class="bg-base-200 p-2 rounded-md"
 		on:click={() => {
 			data.input = [...data.input, { role: '', text: '' }];
 		}}>Add role</button
@@ -117,7 +126,7 @@
 		{/if}
 	</p>
 	<button
-		class="bg-gray-100 p-2 rounded-md disabled:bg-gray-400 disabled:text-gray-800"
+		class="bg-base-200 p-2 rounded-md disabled:bg-gray-400 disabled:text-gray-800"
 		disabled={!buttonEnabled}
 		on:click={() => {
 			output = btoa(String.fromCharCode(...encode(data)));
@@ -128,6 +137,6 @@
 			<pre class="break-words w-96"><code class="dark:text-cyan-50 break-words w-96">{output}</code
 				></pre>
 		</div>
-		<button class="bg-gray-100 p-2 rounded-md" on:click={() => (output = undefined)}>Clear</button>
+		<button class="bg-base-200 p-2 rounded-md" on:click={() => (output = undefined)}>Clear</button>
 	{/if}
 </div>

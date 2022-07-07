@@ -1,6 +1,7 @@
 <script>
 	import Paragraph from '../components/paragraph.svelte';
 	import { Parallax, ParallaxLayer } from 'svelte-parallax';
+	import { INVITE } from '../consts';
 
 	export const ssr = true;
 	export const prerender = true;
@@ -54,7 +55,7 @@
 		<div class="flex justify-center">
 			<a
 				class={'text-white p-4 text-2xl hover:bg-sky-800 duration-150 text-center font-bold py-2 px-4 rounded'}
-				href="https://discord.com/oauth2/authorize?client_id=870383692403593226&permissions=117824&scope=bot%20applications.commands"
+				href={INVITE}
 				target="_blank"
 				id="download"
 			>
@@ -91,7 +92,7 @@
 		<div class="flex justify-center">
 			<a
 				class={'text-white p-4 text-2xl hover:bg-sky-800 duration-150 text-center font-bold py-2 px-4 rounded'}
-				href="https://discord.com/oauth2/authorize?client_id=870383692403593226&permissions=117824&scope=bot%20applications.commands"
+				href={INVITE}
 				target="_blank"
 				id="download"
 			>
@@ -100,13 +101,3 @@
 		</div>
 	</ParallaxLayer>
 </Parallax>
-
-<Paragraph>
-	<!-- <p>
-		<a
-			href="https://discord.com/oauth2/authorize?client_id=870383692403593226&permissions=117824&scope=bot%20applications.commands"
-			>Invite aethor</a
-		> now
-	</p>
-	<img src="/frog.jpg" alt="frog" /> -->
-</Paragraph>
