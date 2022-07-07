@@ -19,7 +19,7 @@ padding: true
 
 ## When you use the bot
 
-- Your discord i
+- Your discord id
 
 ## Who gets this data
 
@@ -27,7 +27,7 @@ Only the bot developer (tricked)
 
 ## This party data sharing
 
-Collected data is not shared with third any parties
+Collected data is not shared with any third parties
 
 ## Questions/Concerns
 
@@ -41,4 +41,4 @@ email tricked@duck.com or contact me via my discord [{DISCORD}]({DISCORD})
 
 # Website privacy policy
 
-This website makes use of third party sercvies: Cloudflare
+This website makes use of third party services: Cloudflare
