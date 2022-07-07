@@ -48,14 +48,7 @@ const config = {
 	target: 'es2020',
 
 	kit: {
-		adapter: adapter({}),
-		vite: {
-			build: {
-				minify: 'esnext',
-				target: 'es2020'
-			},
-			plugins: []
-		}
+		adapter: adapter({})
 	}
 };
 
