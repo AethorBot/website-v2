@@ -120,7 +120,7 @@
 		<input type="checkbox" class="peer" />
 		<div class="collapse-title bg-base-200 text-primary-content">How do i create a ticket?</div>
 		<div class="collapse-content">
-			<p>You run -ticket in the support discord server</p>
+			<p>You run /ticket in the support discord server</p>
 		</div>
 	</div>
 </div>
