@@ -51,8 +51,8 @@
 			</tr>
 			<tr>
 				<td>Tags</td>
-				<td class="text-red-600"><Cross /></td>
-				<td class="border-x-accent border-x-2">50</td>
+				<td class="">20</td>
+				<td class="border-x-accent border-x-2">200</td>
 			</tr>
 			<tr>
 				<td>Suggestion Setups</td>
