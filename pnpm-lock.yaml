@@ -22,6 +22,7 @@ specifiers:
   rehype-autolink-headings: ^6.1.1
   rehype-slug: ^5.0.1
   svelte: ^3.49.0
+  svelte-adapter-bun: ^0.1.0
   svelte-check: ^2.8.0
   svelte-cubed: ^0.2.1
   svelte-material-icons: ^2.0.2
@@ -34,6 +35,9 @@ specifiers:
   typescript: ^4.7.4
   vite: ^2.9.14
   vite-plugin-pwa: ^0.12.2
+
+dependencies:
+  svelte-adapter-bun: 0.1.0
 
 devDependencies:
   '@fontsource/roboto': 4.5.7
@@ -4549,6 +4553,10 @@ packages:
     resolution: {integrity: sha512-ot0WnXS9fgdkgIcePe6RHNk1WA8+muPa6cSjeR3V8K27q9BB1rTE3R1p7Hv0z1ZyAc8s6Vvv8DIyWf681MAt0w==}
     engines: {node: '>= 0.4'}
     dev: true
+
+  /svelte-adapter-bun/0.1.0:
+    resolution: {integrity: sha512-COkTj+PoBku0y5hVV/FVgYqpLejEmQYKeuLfNzgVVWRE4nifU4T9Bx3GdlnDcXj+LXU/FCy3VKq7fl5UNrl/FA==}
+    dev: false
 
   /svelte-check/2.8.0_svelte@3.49.0:
     resolution: {integrity: sha512-HRL66BxffMAZusqe5I5k26mRWQ+BobGd9Rxm3onh7ZVu0nTk8YTKJ9vu3LVPjUGLU9IX7zS+jmwPVhJYdXJ8vg==}

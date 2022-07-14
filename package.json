@@ -46,5 +46,8 @@
     "vite": "^2.9.14",
     "vite-plugin-pwa": "^0.12.2"
   },
-  "type": "module"
+  "type": "module",
+  "dependencies": {
+    "svelte-adapter-bun": "^0.1.0"
+  }
 }

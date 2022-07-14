@@ -12,17 +12,17 @@
 		{
 			name: 'Suggestions Channel',
 			description: 'Every message sent in a set channel becomes a suggestion, courtesy of Aethor.',
-			image: 'suggestions.png'
+			image: 'Suggestion.png'
 		},
 		{
 			name: 'Accepted Channel',
 			description: 'You can set a channel in which to send all accepted suggestions for Aethor.',
-			image: 'accepted.png'
+			image: 'Accepted.png'
 		},
 		{
 			name: 'Denied Channel',
 			description: 'You can set a channel in which to send all denied suggestions for Aethor.',
-			image: 'denied.png'
+			image: 'Denied.png'
 		},
 		{
 			name: 'Customizeability',

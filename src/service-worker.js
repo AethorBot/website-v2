@@ -1,4 +1,5 @@
 // based on https://github.com/tretapey/svelte-pwa/blob/master/public/service-worker.js
+//@ts-no-check
 import { build, files, version } from '$service-worker';
 
 const worker = self;
@@ -13,6 +14,7 @@ worker.addEventListener('install', (event) => {
 		caches.open(CACHE_NAME).then((cache) => {
 			console.log('[ServiceWorker] Pre-caching offline page');
 			return cache.addAll(to_cache).then(() => {
+				// @ts-ignore
 				worker.skipWaiting();
 			});
 		})
@@ -34,6 +36,7 @@ worker.addEventListener('activate', (event) => {
 			)
 		)
 	);
+	// @ts-ignore
 	worker.clients.claim();
 });
 
