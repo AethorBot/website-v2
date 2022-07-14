@@ -46,9 +46,8 @@ const config = {
 		})
 	],
 	target: 'es2020',
-
 	kit: {
-		adapter: adapter({})
+		adapter: adapter()
 	}
 };
 

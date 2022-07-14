@@ -1,11 +1,10 @@
 .DS_Store
 node_modules
 /build
-/.svelte-kit/**/*
+/.svelte-kit
 /package
 .env
 .env.*
 !.env.example
 .vercel_build_output
 .netlify
-!.svelte-kit/tsconfig.json
