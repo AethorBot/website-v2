@@ -41,11 +41,11 @@
     "three": "^0.135.0",
     "tslib": "^2.4.0",
     "typescript": "^4.7.4",
+    "@sveltejs/adapter-cloudflare": "1.0.0-next.28",
     "vite": "^2.9.14",
     "vite-plugin-pwa": "^0.12.3"
   },
   "type": "module",
   "dependencies": {
-    "svelte-adapter-bun": "^0.1.0"
   }
 }
