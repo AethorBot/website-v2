@@ -26,6 +26,16 @@
 			</div>
 		</div>
 	</div>
+	<div class="card card-compact w-96 bg-base-100 shadow-xl md:mx-0 mx-auto">
+		<div class="card-body">
+			<h2 class="card-title">Aethor Premium (1 server) (lifetime)</h2>
+			<div class="card-actions justify-end">
+				<a href="https://buy.stripe.com/6oE3ex0gHdl15va4gj" target="_blank" rel="external">
+					<button class="btn btn-accent rounded-md">Buy Now (30€)</button>
+				</a>
+			</div>
+		</div>
+	</div>
 </div>
 
 <div class="overflow-x-auto md:px-20 bg-base-300 py-10">
@@ -100,7 +110,7 @@
 				Aethor premium is a monthly payment and after the payment runs out premium will be removed.
 			</p>
 			<p>
-				After paying you need to join the <a href={DISCORD} class="link link-hover link-accent">
+				After paying you need to join the <a href={'/discord'} class="link link-hover link-accent">
 					discord server
 				</a> and make a ticket with the email used and the discord server id's that you want premium
 				for.

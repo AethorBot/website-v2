@@ -61,8 +61,8 @@
 		<div>
 			<span class="footer-title">Company</span>
 			<a class="link link-hover" href={INVITE}>Invite</a>
-			<a class="link link-hover" href={DISCORD}>Support</a>
-			<a class="link link-hover" href={DISCORD}>Discord</a>
+			<a class="link link-hover" href={'/discord'}>Support</a>
+			<a class="link link-hover" href={'/discord'}>Discord</a>
 			<a class="link link-hover" href="/docs">Wiki</a>
 		</div>
 		<div>

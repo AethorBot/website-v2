@@ -31,11 +31,11 @@ Collected data is not shared with any third parties
 
 ## Questions/Concerns
 
-For concerns and questions you can send a email to me at tricked@duck.com or join the discord and ask your question there [{DISCORD}]({DISCORD})
+For concerns and questions you can send a email to me at tricked@duck.com or join the discord and ask your question there [{DISCORD}](/discord)
 
 ## How do i get my data deleted?
 
-email tricked@duck.com or contact me via my discord [{DISCORD}]({DISCORD})
+email tricked@duck.com or contact me via my discord [{DISCORD}](/discord)
 
 ---
 
