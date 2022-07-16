@@ -30,8 +30,8 @@
 		<div class="card-body">
 			<h2 class="card-title">Aethor Premium (1 server) (lifetime)</h2>
 			<div class="card-actions justify-end">
-				<a href="https://buy.stripe.com/6oE3ex0gHdl15va4gj" target="_blank" rel="external">
-					<button class="btn btn-accent rounded-md">Buy Now (30€)</button>
+				<a href="https://buy.stripe.com/28oeXfbZp6WDcXCcMQ" target="_blank" rel="external">
+					<button class="btn btn-accent rounded-md">Buy Now (20€)</button>
 				</a>
 			</div>
 		</div>
