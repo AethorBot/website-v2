@@ -1,7 +1,6 @@
 <script>
 	import { onMount } from 'svelte';
 	import '../app.css';
-	import '@fontsource/roboto';
 	import { DISCORD, INVITE } from '../consts';
 	import Paragraph from '../components/paragraph.svelte';
 	import Fire from 'svelte-material-icons/Fire.svelte';
