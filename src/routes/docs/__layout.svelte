@@ -20,7 +20,7 @@
 
 <div class="flex gap-2 md:flex-row flex-col">
 	<div>
-		<ul class="menu bg-base-200 w-56 pt-4 h-full">
+		<ul class="menu bg-base-200 md:w-56 w-full pt-4 h-full">
 			{#each docs as doc}
 				<li class={`${$page.url.pathname == `/docs/${doc.slug}` ? 'bordered' : ''}`}>
 					<a sveltekit:prefetch href={doc.slug == 'index' ? '/docs' : `/docs/${doc.slug}`}
@@ -31,7 +31,7 @@
 		</ul>
 	</div>
 
-	<div class="md:p-0 p-4 mt-4">
+	<div class="md:p-0 p-4 mt-4 pb-8">
 		<slot />
 	</div>
 </div>

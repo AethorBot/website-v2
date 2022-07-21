@@ -75,7 +75,7 @@
 				<td class="border-x-accent border-x-2">10</td>
 			</tr>
 			<tr>
-				<td>Ticked Topics</td>
+				<td>Ticket Topics</td>
 				<td>5</td>
 				<td class="border-x-accent border-x-2">20</td>
 			</tr>
@@ -135,7 +135,10 @@
 		<input type="checkbox" class="peer" />
 		<div class="collapse-title bg-base-200 text-primary-content">How do i create a ticket?</div>
 		<div class="collapse-content">
-			<p>You run /ticket in the support discord server</p>
+			<p>
+				There's a channel called tickets in the discord server and you can create a ticket from that
+				channel
+			</p>
 		</div>
 	</div>
 </div>

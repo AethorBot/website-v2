@@ -17,6 +17,13 @@ padding: true
 - Message content
 - Attachments
 
+### When you make a ticket
+
+- Your name and tag
+- The server the suggestion was made in
+- Message content
+- Attachments
+
 ## When you use the bot
 
 - Your discord id
