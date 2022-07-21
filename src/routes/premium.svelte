@@ -75,6 +75,11 @@
 				<td class="border-x-accent border-x-2">10</td>
 			</tr>
 			<tr>
+				<td>Ticked Topics</td>
+				<td>5</td>
+				<td class="border-x-accent border-x-2">20</td>
+			</tr>
+			<tr>
 				<td>All suggestion commands</td>
 				<td class="text-green-600"><Accept /></td>
 				<td class="text-green-600 border-x-accent border-x-2"><Accept /></td>

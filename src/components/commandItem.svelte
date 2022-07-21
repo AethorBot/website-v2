@@ -1,6 +1,24 @@
 <script lang="ts">
-	import type { APIApplicationCommand } from 'discord-api-types/v10';
-	import { ApplicationCommandOptionType, ApplicationCommandType } from 'discord-api-types/v10';
+	enum ApplicationCommandType {
+		ChatInput = 1,
+		User = 2,
+		Message = 3
+	}
+	interface APIApplicationCommand {
+		id: string;
+		type: ApplicationCommandType;
+		application_id: string;
+		guild_id?: string;
+		name: string;
+		name_localized?: string;
+		description: string;
+		description_localized?: string;
+		options?: any[];
+		default_member_permissions: Permissions | null;
+		dm_permission?: boolean;
+		default_permission?: boolean;
+		version: string;
+	}
 	import ToolTip from './ToolTip.svelte';
 	export let name = '';
 	export let options: APIApplicationCommand['options'] = [];

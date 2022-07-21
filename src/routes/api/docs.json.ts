@@ -1,4 +1,4 @@
-export async function get() {
+export async function GET() {
   const allPostFiles = import.meta.glob("../docs/*.svelte.md");
   const iterablePostFiles = Object.entries(allPostFiles);
 

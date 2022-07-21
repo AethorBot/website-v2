@@ -1,4 +1,4 @@
-export const get = async () => {
+export const GET = async () => {
   const commands = await fetch("https://aethor-api.tricked.pro/commands").then(
     (r) => r.json(),
   );

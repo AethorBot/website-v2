@@ -1,5 +1,19 @@
 <script context="module" lang="ts">
-	import type { APIApplicationCommand } from 'discord-api-types/v10';
+	interface APIApplicationCommand {
+		id: string;
+		type: number;
+		application_id: string;
+		guild_id?: string;
+		name: string;
+		name_localized?: string;
+		description: string;
+		description_localized?: string;
+		options?: any[];
+		default_member_permissions: Permissions | null;
+		dm_permission?: boolean;
+		default_permission?: boolean;
+		version: string;
+	}
 	export async function load({ params, fetch, session, stuff }) {
 		const url = `/api/commands.json`;
 		const response = await fetch(url);
