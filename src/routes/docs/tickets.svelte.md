@@ -21,3 +21,14 @@ published: true
 And when you click on that button
 
 ![](/assets/ticket-view.png)
+
+## Changing the color
+
+You can change the color of a button by adding
+
+- `-green`
+- `-blue` (default)
+- `-red`
+- `-gray`
+
+before each comma in a topic to change the button color
