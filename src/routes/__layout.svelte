@@ -1,4 +1,13 @@
-<script>
+<script context="module">
+	/** * @type {import('@sveltejs/kit').Load} */
+	export async function load({ session }) {
+		return {
+			props: { user: session.user || false }
+		};
+	}
+</script>
+
+<script lang="ts">
 	import { onMount } from 'svelte';
 	import '../app.css';
 	import { DISCORD, INVITE } from '../consts';
@@ -12,11 +21,11 @@
 		document.documentElement.classList.add('dark');
 	});
 	const buttons = [
-		{
-			l: '/',
-			n: 'Home',
-			i: Home
-		},
+		// {
+		// 	l: '/',
+		// 	n: 'Home',
+		// 	i: Home
+		// },
 		{ l: '/premium', n: 'Premium', i: Fire },
 		{
 			l: '/docs',
@@ -34,10 +43,23 @@
 			i: Roles
 		}
 	];
+
+	export let user: Record<string, any>;
 </script>
 
 <div class="min-h-screen">
 	<nav class="w-full gap-2 bg-zinc-900 text-zinc-200 p-4 flex flex-col md:flex-row">
+		<a href="/">
+			<div class="flex">
+				<p
+					class="hover:bg-zinc-900 hover:text-zinc-300 dark:hover:bg-zinc-200 dark:hover:text-zinc-900 duration-150 py-1 px-2 text-lg rounded-lg flex align-middle leading-[1em] gap-2 "
+				>
+					<img src="/Logo%20Round.png" class="h-8" />
+					Aethor
+				</p>
+			</div>
+		</a>
+
 		{#each buttons as button}
 			<a
 				href={button.l}
@@ -52,6 +74,16 @@
 				{button.n}
 			</a>
 		{/each}
+		{#if user}
+			<!-- TODO: Probably make a dropdown with log in i guess? -->
+			<p class="ml-auto text-center my-auto leading-none font-bold text-xl">{user.username}</p>
+			<div class="avatar">
+				<div class="w-8 rounded-full">
+					<img src={`https://cdn.discordapp.com/avatars/${user.id}/${user.avatar}.png?size=256`} />
+				</div>
+			</div>
+			<a title="Sign out" href="api/signout">Sign Out</a>
+		{/if}
 	</nav>
 	<main class="">
 		<slot />
