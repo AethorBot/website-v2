@@ -14,8 +14,9 @@
 </script>
 
 <script lang="ts">
+	import { GUILD_INVITE } from '../../consts';
+
 	export let user: Record<string, any>;
-	console.log('user', user);
 </script>
 
 <div>
@@ -25,7 +26,9 @@
 		<div class="flex flex-wrap gap-5 justify-center">
 			{#each user.guilds as server}
 				<a
-					href={`/dash/manage/${server.id}`}
+					href={!(server.allowed && server.joined)
+						? GUILD_INVITE(server.id)
+						: `/dash/manage/${server.id}`}
 					class={`transition ease-in-out delay-150 hover:-translate-y-4 hover:scale-110 duration-300 w-60 ${
 						!(server.allowed && server.joined) ? 'grayscale' : ''
 					}`}

@@ -1,6 +1,6 @@
 import cookie from "cookie";
 import type { RequestHandler } from "@sveltejs/kit";
-const BACKEND = import.meta.env.VITE_BACKEND_URL;
+import { BACKEND } from "../../../consts";
 
 export const GET: RequestHandler = async (req) => {
   const cookies = cookie.parse(req.request.headers.get("cookie") || "");

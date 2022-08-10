@@ -1,7 +1,6 @@
-const DISCORD_CLIENT_ID = import.meta.env.VITE_DISCORD_CLIENT_ID;
-const DISCORD_CLIENT_SECRET = import.meta.env.VITE_DISCORD_CLIENT_SECRET;
-const DISCORD_REDIRECT_URI = import.meta.env.VITE_DISCORD_REDIRECT_URI;
+import { DISCORD_CLIENT_ID, DISCORD_REDIRECT_URI, env } from "../../consts";
 
+const DISCORD_CLIENT_SECRET = env("DISCORD_CLIENT_SECRET");
 /**
  * @type {import('@sveltejs/kit').RequestHandler}
  */
@@ -51,7 +50,7 @@ export async function GET({ url }) {
         `disco_access_token=${response.access_token}; Path=/; HttpOnly; SameSite=Strict; Expires=${access_token_expires_in}}`,
         `disco_refresh_token=${response.refresh_token}; Path=/; HttpOnly; SameSite=Strict; Expires=${refresh_token_expires_in}`,
       ],
-      Location: "/dash",
+      Location: "/signin",
     },
     status: 302,
   };

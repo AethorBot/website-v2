@@ -17,6 +17,7 @@
 	import Book from 'svelte-material-icons/Book.svelte';
 	import Feed from 'svelte-material-icons/RouterWirelessSettings.svelte';
 	import Roles from 'svelte-material-icons/AccountMultiplePlus.svelte';
+	import Dashbord from 'svelte-material-icons/ViewDashboard.svelte';
 	onMount(() => {
 		document.documentElement.classList.add('dark');
 	});
@@ -38,9 +39,9 @@
 			i: Feed
 		},
 		{
-			l: '/roles',
-			n: 'Button Roles',
-			i: Roles
+			l: '/dash',
+			n: 'Dashboard',
+			i: Dashbord
 		}
 	];
 
@@ -50,29 +51,31 @@
 <div class="min-h-screen">
 	<nav class="w-full gap-2 bg-zinc-900 text-zinc-200 p-4 flex flex-col md:flex-row">
 		<a href="/">
-			<div class="flex">
+			<div class="flex items-center">
 				<p
-					class="hover:bg-zinc-900 hover:text-zinc-300 dark:hover:bg-zinc-200 dark:hover:text-zinc-900 duration-150 py-1 px-2 text-lg rounded-lg flex align-middle leading-[1em] gap-2 "
+					class="hover:bg-zinc-900 hover:text-zinc-300 dark:hover:bg-zinc-200 dark:hover:text-zinc-900 duration-150 py-1 px-2 text-lg rounded-lg flex align-middle leading-[1em] gap-2 items-center"
 				>
-					<img src="/Logo%20Round.png" class="h-8" />
+					<img src="/Logo%20Round.png" class="h-8 flex" />
 					Aethor
 				</p>
 			</div>
 		</a>
 
 		{#each buttons as button}
-			<a
-				href={button.l}
-				rel={button.l.startsWith('https') ? 'external' : undefined}
-				target={button.l.startsWith('https') ? '_blank' : undefined}
-				sveltekit:prefetch
-				class={`hover:bg-zinc-900 hover:text-zinc-300 dark:hover:bg-zinc-200 dark:hover:text-zinc-900 duration-150 py-1 px-2 text-lg rounded-lg flex align-middle leading-[1em] gap-2 ${
-					button.l == '/premium' ? 'animate-pulse-slow' : ''
-				}`}
-			>
-				<svelte:component this={button.i} />
-				{button.n}
-			</a>
+			{#if !(button.l == '/dash' && user)}
+				<a
+					href={button.l}
+					rel={button.l.startsWith('https') ? 'external' : undefined}
+					target={button.l.startsWith('https') ? '_blank' : undefined}
+					sveltekit:prefetch
+					class={`hover:bg-zinc-900 hover:text-zinc-300 dark:hover:bg-zinc-200 dark:hover:text-zinc-900 duration-150 py-1 px-2 text-lg rounded-lg align-middle leading-[1em] gap-2 flex items-center ${
+						button.l == '/premium' ? 'animate-pulse-slow' : ''
+					}${button.l == '/dash' ? 'ml-auto' : ''}`}
+				>
+					<svelte:component this={button.i} />
+					{button.n}
+				</a>
+			{/if}
 		{/each}
 		{#if user}
 			<!-- TODO: Probably make a dropdown with log in i guess? -->

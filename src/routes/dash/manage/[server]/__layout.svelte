@@ -30,6 +30,7 @@
 			</li>
 			<li><a href={`/dash/manage/${guild}/suggestions`}><List size="2em" />Suggestions</a></li>
 			<li><a href={`/dash/manage/${guild}/tickets`}><List size="2em" />Tickets</a></li>
+			<li><a href={`/dash/manage/${guild}/roles`}><List size="2em" />Roles</a></li>
 		</ul>
 		<slot />
 	</div>
