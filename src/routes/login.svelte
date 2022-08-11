@@ -10,4 +10,8 @@
 	}
 </script>
 
-<a title="Discord OAuth2" href="api/auth">Authenticate via Discord</a>
+<div class="justify-center flex items-center p-5 py-20">
+	<button class="btn btn-primary">
+		<a title="Discord OAuth2" href="api/auth">Authenticate via Discord</a>
+	</button>
+</div>

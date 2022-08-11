@@ -9,7 +9,13 @@
   "display": "standalone",
   "icons": [
     {
-      "src": "favicon.png",
+      "src": "Logo.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "Logo Buttons.png",
       "sizes": "512x512",
       "type": "image/png",
       "purpose": "any maskable"

@@ -32,9 +32,9 @@ const rehypePlugins = [
 /** @type {import('@sveltejs/kit').Config} */
 const config = {
 	extensions: ['.svelte', '.svelte.md', '.md'],
-
-	// Consult https://github.com/sveltejs/svelte-preprocess
-	// for more information about preprocessors
+	onwarn: (warning, handler) => {
+		// handler(warning);
+	},
 	preprocess: [
 		preprocess({}),
 		mdsvex({

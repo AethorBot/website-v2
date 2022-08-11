@@ -1,5 +1,5 @@
-import { DISCORD_CLIENT_ID, DISCORD_REDIRECT_URI, env } from "../../consts";
-const DISCORD_CLIENT_SECRET = env("DISCORD_CLIENT_SECRET");
+import { DISCORD_CLIENT_ID, DISCORD_REDIRECT_URI } from "../../consts";
+const DISCORD_CLIENT_SECRET = import.meta.env["VITE_DISCORD_CLIENT_SECRET"];
 
 /**
  * @type {import('@sveltejs/kit').RequestHandler}

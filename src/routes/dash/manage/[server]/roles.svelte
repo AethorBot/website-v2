@@ -31,7 +31,7 @@
 		dropdown: true,
 		description: '',
 		title: '',
-		input: []
+		input: [{ text: 'Placeholder' }]
 	} as ButtonRole;
 	export let guild: Record<string, any>;
 
@@ -42,27 +42,14 @@
 		!data.input.find((x) => x.role == '') &&
 		!data.input.find((x) => x.text == '');
 	$: {
-		if (output || buttonEnabled) {
+		if (buttonEnabled) {
 			output = btoa(String.fromCharCode(...encode(data)));
 		}
 	}
 </script>
 
-<div>
+<div class="p-5">
 	<div class="grid gap-4 justify-center">
-		<!-- <label
-			class="container break-words w-96 p-2 rounded-md label cursor-pointer bg-base-200"
-			disabled
-		>
-			<input
-				type="checkbox"
-				class="checkbox checkbox-secondary"
-				checked={false}
-				disabled
-				on:change={() => (data.dropdown = !data.dropdown)}
-			/>
-			Dropdown?
-		</label> -->
 		<div>
 			<input
 				value={data.title}
@@ -87,9 +74,7 @@
 		</div>
 
 		<div class="w-auto grid gap-2">
-			{#if data.input.length != 0}
-				<p class="">Button/Field adjust as needed</p>
-			{/if}
+			<p class="">Set a button name and role</p>
 			{#each data.input as input, index}
 				<div class="w-auto grid gap-2">
 					<div class="flex gap-1 w-auto flex-col">
@@ -140,20 +125,24 @@
 				Empty roles detected
 			{/if}
 		</p>
-		<button
-			class="bg-base-200 p-2 rounded-md disabled:bg-gray-400 disabled:text-gray-800"
-			disabled={!buttonEnabled}
-			on:click={() => {
-				output = btoa(String.fromCharCode(...encode(data)));
-			}}>Export</button
-		>
+
 		{#if output && buttonEnabled}
-			<div class="prose prose-invert">
-				<pre class="break-words w-96"><code class="dark:text-cyan-50 break-words w-96"
-						>{output}</code
-					></pre>
-			</div>
-			<button class="bg-base-200 p-2 rounded-md" on:click={() => (output = undefined)}>Clear</button
+			<textarea
+				readonly
+				spellcheck={false}
+				wrap={'off'}
+				class="textarea textarea-secondary rounded-sm w-auto"
+				rows={1}
+				id="out">{output}</textarea
+			>
+			<button
+				class="bg-base-200 p-2 rounded-md"
+				on:click={async () => {
+					const copyText = document.getElementById('out');
+					copyText.select();
+					copyText.setSelectionRange(0, 99999); /* For mobile devices */
+					await navigator.clipboard.writeText(copyText.value);
+				}}>Copy</button
 			>
 		{/if}
 	</div>

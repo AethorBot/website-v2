@@ -55,7 +55,7 @@
 				<p
 					class="hover:bg-zinc-900 hover:text-zinc-300 dark:hover:bg-zinc-200 dark:hover:text-zinc-900 duration-150 py-1 px-2 text-lg rounded-lg flex align-middle leading-[1em] gap-2 items-center"
 				>
-					<img src="/Logo%20Round.png" class="h-8 flex" />
+					<img src="/Logo%20Round.png" class="h-8 flex" alt="Aethor Logo" />
 					Aethor
 				</p>
 			</div>
@@ -82,7 +82,10 @@
 			<p class="ml-auto text-center my-auto leading-none font-bold text-xl">{user.username}</p>
 			<div class="avatar">
 				<div class="w-8 rounded-full">
-					<img src={`https://cdn.discordapp.com/avatars/${user.id}/${user.avatar}.png?size=256`} />
+					<img
+						src={`https://cdn.discordapp.com/avatars/${user.id}/${user.avatar}.png?size=256`}
+						alt={user.username}
+					/>
 				</div>
 			</div>
 			<a title="Sign out" href="api/signout">Sign Out</a>

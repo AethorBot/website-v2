@@ -1,6 +1,8 @@
-<script>
-	import { page } from '$app/stores';
+<script context="module">
+	export const prerender = true;
+</script>
 
+<script>
 	export let title;
 	export let desc;
 	export let padding;
