@@ -59,7 +59,11 @@
 				target="_blank"
 				id="download"
 			>
-				Add Aethor</a
+				Add Aethor. {#await fetch('/api/stats.json').then((r) => r.json()) then res}
+					{#if res.numbers.guilds}
+						Aethor is in {res.numbers.guilds} servers
+					{/if}
+				{/await}</a
 			>
 		</div>
 	</ParallaxLayer>
