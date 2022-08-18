@@ -8,9 +8,10 @@
 	export let title;
 	export let desc;
 	export let padding;
+	export let image;
 </script>
 
-<Seo {title} description={desc} />
+<Seo {title} description={desc} {image} />
 
 <div class="flex flex-col-reverse justify-between gap-6 xl:flex-row">
 	<div

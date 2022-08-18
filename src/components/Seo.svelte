@@ -3,6 +3,7 @@
 	export let pageTitle = title;
 	export let description = `Aethor is the best suggestions bot!`;
 	export let logo = '/Logo Round.png';
+	export let image = '/Logo.png';
 </script>
 
 <svelte:head>
@@ -16,6 +17,8 @@
 
 	<meta name="og:description" content={description} />
 	<meta name="description" content={description} />
+
+	<meta name="og:image" content={image} />
 
 	<link rel="icon" href={logo} type="image/png" />
 

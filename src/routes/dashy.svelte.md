@@ -1,5 +1,8 @@
 ---
 padding: true
+title: Dashy
+desc: Dashy is a bot that exports data from your Discord server to make a dashboard out of it!
+image: /Dashy.png
 ---
 
 <script>
@@ -11,7 +14,7 @@ padding: true
 	<img src="/Dashy.png" class="h-64 rounded-xl" />
 </div>
 <h2 class="text-lg text-center">
-	Dashy is a bot that exports data from your discord server to make a dashboard out of it!
+	Dashy is a bot that exports data from your Discord server to make a dashboard out of it!
 </h2>
 <a href={DASHY_INVITE} rel="external" target="_blank" class="no-underline flex justify-center">
 <button class="btn btn-primary">
