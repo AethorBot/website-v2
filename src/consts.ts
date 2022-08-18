@@ -35,3 +35,6 @@ export const DISCORD_ENDPOINT = (
 );
 /* invite for adding to server */
 export const GUILD_INVITE = (g: string) => `${INVITE}&guild_id=${g}` as const;
+
+export const DASHY_INVITE =
+  "https://discord.com/oauth2/authorize?client_id=838065177068437544&scope=bot%20applications.commands&permissions=32";

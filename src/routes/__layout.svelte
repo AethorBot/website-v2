@@ -101,6 +101,7 @@
 			<a class="link link-hover" href={'/discord'}>Support</a>
 			<a class="link link-hover" href={'/discord'}>Discord</a>
 			<a class="link link-hover" href="/docs">Wiki</a>
+			<a class="link link-hover" href="/dashy">Dashy</a>
 		</div>
 		<div>
 			<span class="footer-title">About</span>
