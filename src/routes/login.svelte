@@ -1,4 +1,5 @@
 <script context="module">
+	import Seo from '../components/Seo.svelte';
 	/** * @type {import('@sveltejs/kit').Load} */
 	export async function load({ session }) {
 		if (session.user) {
@@ -9,6 +10,8 @@
 		}
 	}
 </script>
+
+<Seo />
 
 <div class="justify-center flex items-center p-5 py-20">
 	<button class="btn btn-primary">

@@ -3,10 +3,14 @@
 </script>
 
 <script>
+	import Seo from '../components/Seo.svelte';
+
 	export let title;
 	export let desc;
 	export let padding;
 </script>
+
+<Seo {title} description={desc} />
 
 <div class="flex flex-col-reverse justify-between gap-6 xl:flex-row">
 	<div

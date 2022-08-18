@@ -2,6 +2,7 @@
 	import Paragraph from '../components/paragraph.svelte';
 	import { Parallax, ParallaxLayer } from 'svelte-parallax';
 	import { INVITE } from '../consts';
+	import Seo from '../components/Seo.svelte';
 
 	export const ssr = true;
 	export const prerender = true;
@@ -31,6 +32,8 @@
 		}
 	];
 </script>
+
+<Seo />
 
 <Parallax
 	sections={features.length + 5}

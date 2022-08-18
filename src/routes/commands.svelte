@@ -59,8 +59,11 @@
 
 <script lang="ts">
 	import CommandItem from '../components/commandItem.svelte';
+	import Seo from '../components/Seo.svelte';
 	export let commands: APIApplicationCommand[];
 </script>
+
+<Seo />
 
 <div class="px-4 py-4">
 	<div class="grid grid-cols-1 gap-4 py-2">
