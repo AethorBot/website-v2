@@ -39,6 +39,12 @@ hidden: true
 - #### [Q] Where can i get a vps?
 - [A] Heres a list of good [vps providers](https://gist.github.com/Tricked-dev/6fee7a1394f02405659902c98abdb784) i would recommend at least 2gb ram
 
+- #### [Q] No data is shown but i did everything correctly
+- [A] Sometimes the datasource doesn't correctly get used in the dashboard in this case you need to edit every panel and select prometheus again.
+
+- #### [Q] Why is the suggestions panel is empty
+- [A] The suggestions panel is a integration with Aethor, to make that panel work you need to add Aethor to your server and enable its suggestions features.
+
 - #### [Q] Is there a public preview
 - [A] No theres not as this would expose grafana secrets and other sensitive data. A preview may be available in the future when grafana supports this.
 
