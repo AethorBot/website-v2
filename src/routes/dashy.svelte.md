@@ -42,8 +42,14 @@ hidden: true
 - #### [Q] No data is shown but i did everything correctly
 - [A] Sometimes the datasource doesn't correctly get used in the dashboard in this case you need to edit every panel and select prometheus again.
 
-- #### [Q] Why is the suggestions panel is empty
+- #### [Q] Why is the suggestions panel is empty?
 - [A] The suggestions panel is a integration with Aethor, to make that panel work you need to add Aethor to your server and enable its suggestions features.
+
+- #### [Q] Why does the bot require manage server permissions?
+- [A] This is needed to get the amount of bots in the server.
+
+- #### [Q] How are active members determined?
+- [A] Active members are people who send a message within the past 5-6 minutes
 
 - #### [Q] Is there a public preview
 - [A] No theres not as this would expose grafana secrets and other sensitive data. A preview may be available in the future when grafana supports this.
