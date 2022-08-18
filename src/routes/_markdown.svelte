@@ -9,6 +9,7 @@
 	export let desc;
 	export let padding;
 	export let image;
+	export let hidden;
 </script>
 
 <Seo {title} description={desc} {image} />
@@ -21,8 +22,10 @@
     		prose-p:m-0
 		${padding ? 'pt-2 max-w-7xl mx-auto' : ''}`}
 	>
-		<h1>{title ?? ''}</h1>
-		<p>{desc ?? ''}</p>
+		{#if !hidden}
+			<h1>{title ?? ''}</h1>
+			<p>{desc ?? ''}</p>
+		{/if}
 		<slot />
 
 		<div class="not-prose flex justify-center xl:hidden" />

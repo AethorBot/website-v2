@@ -3,6 +3,7 @@ padding: true
 title: Dashy
 desc: Dashy is a bot that exports data from your Discord server to make a dashboard out of it!
 image: /Dashy.png
+hidden: true
 ---
 
 <script>
