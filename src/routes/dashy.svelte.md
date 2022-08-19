@@ -22,9 +22,11 @@ hidden: true
   Invite Dashy
 </button>
 </a>
+<a href="https://dash.tricked.pro/dashboard/snapshot/73HTRKKZwXBg0FfgWQ04zkqkFxrJC0xt" target="_blank" rel="external">
 <div class="flex justify-center">
 	<img src="https://ascella.wtf/v2/ascella/view/kHwbHtmf.png" class="w-[100rem]" />
 </div>
+</a>
 
 ---
 
@@ -71,7 +73,7 @@ hidden: true
 <br/>
 
 - #### [Q] Is there a public preview
-- [A] No theres not as this would expose grafana secrets and other sensitive data. A preview may be available in the future when grafana supports this.
+- [A] Yes <https://dash.tricked.pro/dashboard/snapshot/73HTRKKZwXBg0FfgWQ04zkqkFxrJC0xt>
 
 <br/>
 
