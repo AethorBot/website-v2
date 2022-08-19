@@ -2,7 +2,10 @@
 	import Cross from 'svelte-material-icons/Close.svelte';
 	import Accept from 'svelte-material-icons/Check.svelte';
 	import { DISCORD } from '../consts';
+	import Seo from '../components/Seo.svelte';
 </script>
+
+<Seo title="Aethor Premium" />
 
 <div class="flex justify-center gap-5 md:flex-row flex-col py-20 bg-base-200">
 	<div class="card card-compact w-96 bg-base-100 shadow-xl md:mx-0 mx-auto">

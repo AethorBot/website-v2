@@ -2,6 +2,7 @@
 	import Paragraph from '../components/paragraph.svelte';
 	import { Parallax, ParallaxLayer } from 'svelte-parallax';
 	import { INVITE } from '../consts';
+	import Seo from '../components/Seo.svelte';
 
 	export const ssr = true;
 	export const prerender = true;
@@ -32,6 +33,8 @@
 	];
 </script>
 
+<Seo />
+
 <Parallax
 	sections={features.length + 5}
 	config={{ stiffness: 0.2, damping: 1 }}
@@ -59,7 +62,11 @@
 				target="_blank"
 				id="download"
 			>
-				Add Aethor</a
+				Add Aethor. {#await fetch('/api/stats.json').then((r) => r.json()) then res}
+					{#if res.numbers.guilds}
+						Aethor is in {res.numbers.guilds} servers
+					{/if}
+				{/await}</a
 			>
 		</div>
 	</ParallaxLayer>

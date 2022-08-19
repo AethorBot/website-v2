@@ -1,10 +1,18 @@
+<script context="module">
+	export const prerender = true;
+</script>
+
 <script>
-	import { page } from '$app/stores';
+	import Seo from '../components/Seo.svelte';
 
 	export let title;
 	export let desc;
 	export let padding;
+	export let image;
+	export let hidden;
 </script>
+
+<Seo {title} description={desc} {image} />
 
 <div class="flex flex-col-reverse justify-between gap-6 xl:flex-row">
 	<div
@@ -14,8 +22,10 @@
     		prose-p:m-0
 		${padding ? 'pt-2 max-w-7xl mx-auto' : ''}`}
 	>
-		<h1>{title ?? ''}</h1>
-		<p>{desc ?? ''}</p>
+		{#if !hidden}
+			<h1>{title ?? ''}</h1>
+			<p>{desc ?? ''}</p>
+		{/if}
 		<slot />
 
 		<div class="not-prose flex justify-center xl:hidden" />

@@ -12,6 +12,7 @@
 			}
 		};
 	}
+	export const prerender = true;
 </script>
 
 <script>
