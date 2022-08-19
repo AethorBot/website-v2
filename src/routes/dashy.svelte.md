@@ -75,7 +75,7 @@ Add Dashy to your discord server, And run /setup it should give a message simila
 
 Then create the grafana instance using [docker][https://docker.com] and follow the steps on this github page further [AethorBot/grafana-prometheus](https://github.com/AethorBot/grafana-prometheus).
 
-## Bare metal / importing the dashboard manually
+### Bare metal / importing the dashboard manually
 
 Create the prometheus.yml at `/etc/prometheus/prometheus.yml`.
 
