@@ -33,29 +33,47 @@ hidden: true
 - #### [Q] What is Dashy?
 - [A] Dashy is a bot that exports data from your discord server to make a dashboard out of it!
 
+<br/>
+
 - #### [Q] How do I use Dashy?
 - [A] See [Getting started](#getting-started)
+
+<br/>
 
 - #### [Q] Where can i get a vps?
 - [A] Heres a list of good [vps providers](https://gist.github.com/Tricked-dev/6fee7a1394f02405659902c98abdb784) i would recommend at least 2gb ram
 
+<br/>
+
 - #### [Q] No data is shown but i did everything correctly
 - [A] Sometimes the datasource doesn't correctly get used in the dashboard in this case you need to edit every panel and select prometheus again.
+
+<br/>
 
 - #### [Q] Why is the suggestions panel is empty?
 - [A] The suggestions panel is a integration with Aethor, to make that panel work you need to add Aethor to your server and enable its suggestions features.
 
+<br/>
+
 - #### [Q] Why does the bot require manage server permissions?
 - [A] This is needed to get the amount of bots in the server.
+
+<br/>
 
 - #### [Q] How are active members determined?
 - [A] Active members are people who send a message within the past 5-6 minutes
 
+<br/>
+
 - #### [Q] error: Are you trying to mount a directory onto a file?
 - [A] You didn't create the prometheus.yml file and it error you need to remove the prometheus.yml directory and create the file
 
+<br/>
+
 - #### [Q] Is there a public preview
 - [A] No theres not as this would expose grafana secrets and other sensitive data. A preview may be available in the future when grafana supports this.
+
+<br/>
 
 ## Getting started
 
