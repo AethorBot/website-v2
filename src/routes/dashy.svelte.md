@@ -12,7 +12,7 @@ hidden: true
 
 </script>
 <div class="flex justify-center">
-	<img src="/Dashy.png" class="h-64 rounded-xl" />
+	<img src="/Dashy.png" class="h-48 rounded-xl" />
 </div>
 <h2 class="text-lg text-center">
 	Dashy is a bot that exports data from your Discord server to make a dashboard out of it!
@@ -23,7 +23,7 @@ hidden: true
 </button>
 </a>
 <div class="flex justify-center">
-	<img src="/dashy-preview.png" class="w-[100rem]" />
+	<img src="https://ascella.wtf/v2/ascella/view/kHwbHtmf.png" class="w-[100rem]" />
 </div>
 
 ---
@@ -51,6 +51,9 @@ hidden: true
 - #### [Q] How are active members determined?
 - [A] Active members are people who send a message within the past 5-6 minutes
 
+- #### [Q] error: Are you trying to mount a directory onto a file?
+- [A] You didn't create the prometheus.yml file and it error you need to remove the prometheus.yml directory and create the file
+
 - #### [Q] Is there a public preview
 - [A] No theres not as this would expose grafana secrets and other sensitive data. A preview may be available in the future when grafana supports this.
 
@@ -68,16 +71,20 @@ Add Dashy to your discord server, And run /setup it should give a message simila
 
 ![https://ascella.wtf/v2/ascella/view/YXse7pEp.png](https://ascella.wtf/v2/ascella/view/YXse7pEp.png)
 
+### Docker
+
 Then create the grafana instance using [docker][https://docker.com] and follow the steps on this github page further [AethorBot/grafana-prometheus](https://github.com/AethorBot/grafana-prometheus).
 
-Create the prometheus.yml at `/etc/prometheus/prometheus.yml` (docker: theres a prometheus file in the repo already just overwrite it).
+## Bare metal / importing the dashboard manually
+
+Create the prometheus.yml at `/etc/prometheus/prometheus.yml`.
 
 Go to [localhost:300](https://localhost:300) / server ip / whatever you configured and make the default user (make sure to use a secure password).
 
 Go to configuration and click on add datasources select prometheus and fill the following info in and click save and quit
 ![https://ascella.wtf/v2/ascella/view/LFMRBjQW.png](https://ascella.wtf/v2/ascella/view/LFMRBjQW.png)
 
-Then go to the dashboard tabs ![https://ascella.wtf/v2/ascella/view/ICFBrts2.png](https://ascella.wtf/v2/ascella/view/ICFBrts2.png) and click on import the dashboard from [/dashboard.json](/dashboard.json)
+Then go to the dashboard tabs ![https://ascella.wtf/v2/ascella/view/ICFBrts2.png](https://ascella.wtf/v2/ascella/view/ICFBrts2.png) and click on import the dashboard from [dashboard.json](https://github.com/AethorBot/grafana-prometheus/blob/master/dashboard.json)
 
 ![https://ascella.wtf/v2/ascella/view/LlFFBzj7.png](https://ascella.wtf/v2/ascella/view/LlFFBzj7.png)
 
