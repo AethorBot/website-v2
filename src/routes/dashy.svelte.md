@@ -62,7 +62,9 @@ hidden: true
 ### Prerequisites
 
 - A discord server
-- A vps or or [Grafana cloud](https://grafana.com/products/cloud/) account
+- A vps or a [Grafana cloud](https://grafana.com/products/cloud/) account
+- docker & docker-compose
+- prometheus and grafana (bare metal)
 - basic sys admin knowledge
 
 ## Installation
