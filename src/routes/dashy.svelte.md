@@ -22,7 +22,7 @@ hidden: true
   Invite Dashy
 </button>
 </a>
-<a href="https://dash.tricked.pro/dashboard/snapshot/73HTRKKZwXBg0FfgWQ04zkqkFxrJC0xt" target="_blank" rel="external">
+<a href="https://dash.tricked.pro/public-dashboards/f335b724ed5447b6a8f1528ba2953e74" target="_blank" rel="external">
 <div class="flex justify-center">
 	<img src="https://ascella.wtf/v2/ascella/view/kHwbHtmf.png" class="w-[100rem]" />
 </div>
@@ -73,7 +73,7 @@ hidden: true
 <br/>
 
 - #### [Q] Is there a public preview
-- [A] Yes <https://dash.tricked.pro/dashboard/snapshot/73HTRKKZwXBg0FfgWQ04zkqkFxrJC0xt>
+- [A] Yes [you can view it here][publicinstance]
 
 <br/>
 
@@ -111,3 +111,5 @@ Then go to the dashboard tabs ![https://ascella.wtf/v2/ascella/view/ICFBrts2.png
 ![https://ascella.wtf/v2/ascella/view/LlFFBzj7.png](https://ascella.wtf/v2/ascella/view/LlFFBzj7.png)
 
 And your done! The dashboard is imported and all data should be viewable, if you have any issues feel free to ask in the [Support discord]({DISCORD}).
+
+[publicinstance]: https://dash.tricked.pro/public-dashboards/f335b724ed5447b6a8f1528ba2953e74
