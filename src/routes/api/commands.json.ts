@@ -1,5 +1,5 @@
 export const GET = async () => {
-  const commands = await fetch("https://aethor-api.tricked.pro/api/commands")
+  const commands = await fetch("https://api.aethor.xyz/api/commands")
     .then(
       (r) => r.json(),
     );

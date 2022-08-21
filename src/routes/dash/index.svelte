@@ -37,10 +37,10 @@
 						<img
 							src={server.icon
 								? `https://cdn.discordapp.com/icons/${server.id}/${server.icon}.png?size=2048`
-								: 'https://ae.tricked.pro/Logo.png'}
+								: '/Logo.png'}
 							on:error={(e) => {
 								if (e?.target?.src) {
-									e.target.src = 'https://ae.tricked.pro/Logo.png';
+									e.target.src = '/Logo.png';
 								}
 							}}
 							alt={server.name}

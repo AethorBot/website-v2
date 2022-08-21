@@ -30,7 +30,6 @@ export const PATCH: RequestHandler = async (req) => {
     };
   } else {
     const res = await guild.text();
-    console.log("RES", res);
     const guild_response = await JSON.parse(res);
     return {
       body: guild_response,
