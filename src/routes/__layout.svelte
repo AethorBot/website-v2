@@ -37,12 +37,12 @@
 			l: '/commands',
 			n: 'Commands',
 			i: Feed
-		},
-		{
-			l: '/dash',
-			n: 'Dashboard',
-			i: Dashbord
 		}
+		// {
+		// 	l: '/dash',
+		// 	n: 'Dashboard',
+		// 	i: Dashbord
+		// }
 	];
 
 	export let user: Record<string, any>;
@@ -77,7 +77,7 @@
 				</a>
 			{/if}
 		{/each}
-		{#if user}
+		{#if false}
 			<!-- TODO: Probably make a dropdown with log in i guess? -->
 			<p class="ml-auto text-center my-auto leading-none font-bold text-xl">{user.username}</p>
 			<div class="avatar">

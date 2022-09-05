@@ -1,6 +1,6 @@
 <script context="module">
 	/** * @type {import('@sveltejs/kit').Load} */
-	export async function load({ session }) {
+	export async function load({ session, fetch }) {
 		if (!session.user) {
 			return {
 				status: 307,

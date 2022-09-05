@@ -1,8 +1,20 @@
-<script>
+<script context="module">
+	/** * @type {import('@sveltejs/kit').Load} */
+	export async function load({ fetch }) {
+		const servers = await fetch('/api/servers.json').then((r) => r.json());
+
+		return {
+			props: { servers }
+		};
+	}
+</script>
+
+<script lang="ts">
 	import Paragraph from '../components/paragraph.svelte';
 	import { Parallax, ParallaxLayer } from 'svelte-parallax';
 	import { INVITE } from '../consts';
 	import Seo from '../components/Seo.svelte';
+	export let servers: Record<string, any>[];
 
 	export const ssr = true;
 	export const prerender = true;
@@ -24,12 +36,12 @@
 			name: 'Denied Channel',
 			description: 'You can set a channel in which to send all denied suggestions for Aethor.',
 			image: 'Denied.png'
-		},
-		{
-			name: 'Customizeability',
-			description: 'There are many suggestion-related commands.',
-			image: 'suggestions-help.png'
 		}
+		// {
+		// 	name: 'Customizeability',
+		// 	description: 'There are many suggestion-related commands.',
+		// 	image: 'suggestions-help.png'
+		// }
 	];
 </script>
 
@@ -54,6 +66,7 @@
 			</div>
 		</div>
 	</ParallaxLayer>
+
 	<ParallaxLayer rate={1.25} span={3} offset={1.5}>
 		<div class="flex justify-center">
 			<a
@@ -70,7 +83,26 @@
 			>
 		</div>
 	</ParallaxLayer>
-
+	<ParallaxLayer rate={1.1} span={3} offset={1.5}>
+		<div
+			class="flex servers horizontal pausing animate mt-40"
+			style="animation-duration: 20s; animation-delay: .5s; animation-iteration-count: infinite;"
+		>
+			{#each servers as server}
+				<div class="max-w-md p-4 bg-base-300 m-2 rounded-sm first">
+					<div class="flex">
+						<img height="128" class="h-14 rounded-md mr-2" src={server.icon} alt={server.name} />
+						<div>
+							<span class="flex gap-1">
+								<p class="font-bold truncate max-w-md w-40">{server.name}</p>
+							</span>
+							<p class="text-gray-600">{server.memberCount}</p>
+						</div>
+					</div>
+				</div>
+			{/each}
+		</div>
+	</ParallaxLayer>
 	{#each features as feature, index}
 		<ParallaxLayer rate={1.25} offset={2 + index} span={1}>
 			<div
@@ -108,3 +140,33 @@
 		</div>
 	</ParallaxLayer>
 </Parallax>
+
+<style>
+	.servers {
+		transform: translateZ(0);
+	}
+	.horizontal.servers {
+		display: inline-block;
+		white-space: nowrap;
+	}
+	.horizontal.servers > * {
+		display: inline-block !important;
+	}
+	.animate.servers {
+		animation-timing-function: linear;
+	}
+	.pausing.servers:hover {
+		animation-play-state: paused;
+	}
+	.animate.horizontal.servers {
+		animation-name: servers-horizontal;
+	}
+	@keyframes servers-horizontal {
+		0% {
+			transform: translate(0);
+		}
+		to {
+			transform: translate(-50%);
+		}
+	}
+</style>
