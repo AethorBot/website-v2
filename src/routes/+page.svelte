@@ -1,16 +1,8 @@
 <script lang="ts">
-	import Paragraph from '../components/paragraph.svelte';
 	import { Parallax, ParallaxLayer } from 'svelte-parallax';
-	import { INVITE } from '../consts';
 	import Seo from '../components/Seo.svelte';
 	export let data;
 	let { servers, stats } = data as { servers: Record<string, any>[]; stats: any };
-
-	export const ssr = true;
-	export const prerender = true;
-	export const hydrate = false;
-	export const router = false;
-
 	const features = [
 		{
 			name: 'Suggestions Channel',
@@ -56,11 +48,11 @@
 		<div class="flex justify-center z-50">
 			<a
 				class={'text-white p-4 text-2xl hover:bg-sky-800 duration-150 text-center font-bold py-2 px-4 rounded'}
-				href={INVITE}
+				href={'/invite'}
 				target="_blank"
 				id="download"
 			>
-				Add Aethor. Aethor is in {stats.numbers.guilds} servers
+				Add Aethor. {#if stats?.numbers?.guilds} Aethor is in {stats?.numbers?.guilds} servers {/if}
 			</a>
 		</div>
 	</ParallaxLayer>
@@ -69,7 +61,7 @@
 			class="flex servers horizontal pausing animate mt-40"
 			style="animation-duration: 20s; animation-delay: .5s; animation-iteration-count: infinite;"
 		>
-			{#each servers as server}
+			{#each servers ?? [] as server}
 				<div class="max-w-md p-4 bg-base-300 m-2 rounded-sm first">
 					<div class="flex">
 						<img height="128" class="h-14 rounded-md mr-2" src={server.icon} alt={server.name} />
@@ -112,7 +104,7 @@
 		<div class="flex justify-center">
 			<a
 				class={'text-white p-4 text-2xl hover:bg-sky-800 duration-150 text-center font-bold py-2 px-4 rounded'}
-				href={INVITE}
+				href={'/invite'}
 				target="_blank"
 				id="download"
 			>
