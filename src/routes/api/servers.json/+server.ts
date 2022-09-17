@@ -1,3 +1,5 @@
+import { json as json } from "@sveltejs/kit";
+
 export async function GET({}) {
   const commands = (await fetch("https://api.aethor.xyz/api/servers.json")
     .then(
@@ -8,8 +10,5 @@ export async function GET({}) {
       }
       return x;
     }).filter((x) => x.id !== "110373943822540800");
-
-  return {
-    body: commands,
-  };
+  return json(commands);
 }

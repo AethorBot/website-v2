@@ -1,14 +1,6 @@
-<script context="module">
-	/** * @type {import('@sveltejs/kit').Load} */
-	export async function load({ session }) {
-		return {
-			props: { user: session.user || false }
-		};
-	}
-</script>
-
 <script lang="ts">
 	import { onMount } from 'svelte';
+
 	import '../app.css';
 	import { DISCORD, INVITE } from '../consts';
 	import Paragraph from '../components/paragraph.svelte';

@@ -1,8 +1,8 @@
 <script>
 	import Cross from 'svelte-material-icons/Close.svelte';
 	import Accept from 'svelte-material-icons/Check.svelte';
-	import { DISCORD } from '../consts';
-	import Seo from '../components/Seo.svelte';
+	import { DISCORD } from '../../consts';
+	import Seo from '../../components/Seo.svelte';
 </script>
 
 <Seo title="Aethor Premium" />

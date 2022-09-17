@@ -7,7 +7,7 @@ hidden: true
 ---
 
 <script>
-	import { DISCORD, DASHY_INVITE } from '../consts';
+	import { DISCORD, DASHY_INVITE } from '../../consts';
 
 
 </script>

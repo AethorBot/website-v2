@@ -9,7 +9,7 @@ published: true
 
 ## Creating button roles
 
-Head over to the [roles creation page](/roles) to create a blueprint
+Head over to the [roles creation page](/docs/roles) to create a blueprint
 
 ![img](/assets/button-site.png)
 

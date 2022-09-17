@@ -1,32 +1,16 @@
-<script context="module">
+<script>
 	import { page } from '$app/stores';
 
-	export async function load({ params, fetch, session, stuff }) {
-		const url = `/api/docs.json`;
-		const response = await fetch(url);
-
-		return {
-			status: response.status,
-			props: {
-				docs: response.ok && (await response.json())
-			}
-		};
-	}
-	export const prerender = true;
-</script>
-
-<script>
-	export let docs;
+	export let data;
+	let { docs } = data;
 </script>
 
 <div class="flex gap-2 md:flex-row flex-col">
 	<div>
 		<ul class="menu bg-base-200 md:w-56 w-full pt-4 h-full">
 			{#each docs as doc}
-				<li class={`${$page.url.pathname == `/docs/${doc.slug}` ? 'bordered' : ''}`}>
-					<a sveltekit:prefetch href={doc.slug == 'index' ? '/docs' : `/docs/${doc.slug}`}
-						>{doc.meta.title}</a
-					>
+				<li class={`${$page.url.pathname == `${doc.slug}` ? 'bordered' : ''}`}>
+					<a sveltekit:prefetch href={`${doc.slug}`}>{doc.meta.title}</a>
 				</li>
 			{/each}
 		</ul>

@@ -1,6 +1,6 @@
 <script>
 	import NoWifi from 'svelte-material-icons/WifiOff.svelte';
-	import Seo from '../components/Seo.svelte';
+	import Seo from '../../components/Seo.svelte';
 </script>
 
 <Seo />

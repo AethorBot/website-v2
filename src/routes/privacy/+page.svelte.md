@@ -5,7 +5,7 @@ padding: true
 ---
 
 <script>
-	import { DISCORD } from '../consts';
+	import { DISCORD } from '../../consts';
 </script>
 
 ## What data do we collect and when

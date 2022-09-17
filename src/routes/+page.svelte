@@ -1,20 +1,10 @@
-<script context="module">
-	/** * @type {import('@sveltejs/kit').Load} */
-	export async function load({ fetch }) {
-		const servers = await fetch('/api/servers.json').then((r) => r.json());
-
-		return {
-			props: { servers }
-		};
-	}
-</script>
-
 <script lang="ts">
 	import Paragraph from '../components/paragraph.svelte';
 	import { Parallax, ParallaxLayer } from 'svelte-parallax';
 	import { INVITE } from '../consts';
 	import Seo from '../components/Seo.svelte';
-	export let servers: Record<string, any>[];
+	export let data;
+	let { servers } = data as { servers: Record<string, any>[] };
 
 	export const ssr = true;
 	export const prerender = true;
@@ -37,20 +27,15 @@
 			description: 'You can set a channel in which to send all denied suggestions for Aethor.',
 			image: 'Denied.png'
 		}
-		// {
-		// 	name: 'Customizeability',
-		// 	description: 'There are many suggestion-related commands.',
-		// 	image: 'suggestions-help.png'
-		// }
 	];
 </script>
 
 <Seo />
 
 <Parallax
-	sections={features.length + 5}
+	sections={features.length + 6}
 	config={{ stiffness: 0.2, damping: 1 }}
-	sectionHeight={200}
+	sectionHeight={300}
 >
 	<ParallaxLayer rate={0.5} span={2}>
 		<div
@@ -67,8 +52,8 @@
 		</div>
 	</ParallaxLayer>
 
-	<ParallaxLayer rate={1.25} span={3} offset={1.5}>
-		<div class="flex justify-center">
+	<ParallaxLayer rate={1.25} span={5} offset={1.1}>
+		<div class="flex justify-center z-50">
 			<a
 				class={'text-white p-4 text-2xl hover:bg-sky-800 duration-150 text-center font-bold py-2 px-4 rounded'}
 				href={INVITE}
@@ -79,11 +64,11 @@
 					{#if res.numbers.guilds}
 						Aethor is in {res.numbers.guilds} servers
 					{/if}
-				{/await}</a
-			>
+				{/await}
+			</a>
 		</div>
 	</ParallaxLayer>
-	<ParallaxLayer rate={1.1} span={3} offset={1.5}>
+	<ParallaxLayer rate={1.1} span={3} offset={2}>
 		<div
 			class="flex servers horizontal pausing animate mt-40"
 			style="animation-duration: 20s; animation-delay: .5s; animation-iteration-count: infinite;"
@@ -104,7 +89,7 @@
 		</div>
 	</ParallaxLayer>
 	{#each features as feature, index}
-		<ParallaxLayer rate={1.25} offset={2 + index} span={1}>
+		<ParallaxLayer rate={1.25} offset={3 + index} span={1}>
 			<div
 				class={`md:flex w-full p-2 my-10 h-100 ${
 					index % 2 ? 'md:ml-auto md:mr-0 text-right' : 'md:mr-auto md:ml-0 md:flex-row-reverse'
@@ -127,7 +112,7 @@
 		</ParallaxLayer>
 	{/each}
 
-	<ParallaxLayer offset={features.length + 3}>
+	<ParallaxLayer offset={features.length + 4}>
 		<div class="flex justify-center">
 			<a
 				class={'text-white p-4 text-2xl hover:bg-sky-800 duration-150 text-center font-bold py-2 px-4 rounded'}
