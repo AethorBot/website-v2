@@ -4,7 +4,7 @@
 	import { INVITE } from '../consts';
 	import Seo from '../components/Seo.svelte';
 	export let data;
-	let { servers } = data as { servers: Record<string, any>[] };
+	let { servers, stats } = data as { servers: Record<string, any>[]; stats: any };
 
 	export const ssr = true;
 	export const prerender = true;
@@ -60,11 +60,7 @@
 				target="_blank"
 				id="download"
 			>
-				Add Aethor. {#await fetch('/api/stats.json').then((r) => r.json()) then res}
-					{#if res.numbers.guilds}
-						Aethor is in {res.numbers.guilds} servers
-					{/if}
-				{/await}
+				Add Aethor. Aethor is in {stats.numbers.guilds} servers
 			</a>
 		</div>
 	</ParallaxLayer>
