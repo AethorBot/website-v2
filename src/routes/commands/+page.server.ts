@@ -14,12 +14,15 @@ interface APIApplicationCommand {
   version: string;
 }
 
-export async function load({ params, fetch }) {
-  const url = `/api/commands.json`;
-  const response = await fetch(url);
-  let res = response.ok && ((await response.json()) as APIApplicationCommand[]);
-  let commands: (APIApplicationCommand & Record<string, any>)[] = [];
+export async function load({ params }) {
+  const res: (APIApplicationCommand & Record<string, any>)[] = await fetch(
+    "https://api.aethor.xyz/api/commands",
+  )
+    .then(
+      (r) => r.json(),
+    );
   const duped = [];
+  const commands: (APIApplicationCommand & Record<string, any>)[] = [];
   if (res) {
     for (let command of res) {
       if (command.options?.[0]?.type == 1) {

@@ -1,12 +1,8 @@
 /** * @type {import('@sveltejs/kit').PageLoad} */
 export async function load() {
 	const [servers, stats] = await Promise.all([
-		fetch('https://api.aethor.xyz/api/servers.json', {
-			mode: 'no-cors'
-		}).then((r) => r.json()),
-		fetch('https://api.aethor.xyz/api/stats.json', {
-			mode: 'no-cors'
-		}).then((r) => r.json())
+		fetch('https://api.aethor.xyz/api/servers.json').then((r) => r.json()),
+		fetch('https://api.aethor.xyz/api/stats.json').then((r) => r.json())
 	]);
 
 	return {
