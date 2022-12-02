@@ -24,7 +24,7 @@ hidden: true
 </a>
 <a href="https://dash.tricked.pro/public-dashboards/f335b724ed5447b6a8f1528ba2953e74" target="_blank" rel="external">
 <div class="flex justify-center">
-	<img src="https://ascella.wtf/v2/ascella/view/kHwbHtmf.png" class="w-[100rem]" />
+	<img src="https://api.ascella.host/v2/ascella/view/kHwbHtmf.png" class="w-[100rem]" />
 </div>
 </a>
 
@@ -91,7 +91,7 @@ hidden: true
 
 Add Dashy to your discord server, And run /setup it should give a message similar to this
 
-![https://ascella.wtf/v2/ascella/view/YXse7pEp.png](https://ascella.wtf/v2/ascella/view/YXse7pEp.png)
+![https://api.ascella.host/v2/ascella/view/YXse7pEp.png](https://api.ascella.host/v2/ascella/view/YXse7pEp.png)
 
 ### Docker
 
@@ -104,11 +104,11 @@ Create the prometheus.yml at `/etc/prometheus/prometheus.yml`.
 Go to [localhost:300](https://localhost:300) / server ip / whatever you configured and make the default user (make sure to use a secure password).
 
 Go to configuration and click on add datasources select prometheus and fill the following info in and click save and quit
-![https://ascella.wtf/v2/ascella/view/LFMRBjQW.png](https://ascella.wtf/v2/ascella/view/LFMRBjQW.png)
+![https://api.ascella.host/v2/ascella/view/LFMRBjQW.png](https://api.ascella.host/v2/ascella/view/LFMRBjQW.png)
 
-Then go to the dashboard tabs ![https://ascella.wtf/v2/ascella/view/ICFBrts2.png](https://ascella.wtf/v2/ascella/view/ICFBrts2.png) and click on import the dashboard from [dashboard.json](https://github.com/AethorBot/grafana-prometheus/blob/master/dashboard.json)
+Then go to the dashboard tabs ![https://api.ascella.host/v2/ascella/view/ICFBrts2.png](https://api.ascella.host/v2/ascella/view/ICFBrts2.png) and click on import the dashboard from [dashboard.json](https://github.com/AethorBot/grafana-prometheus/blob/master/dashboard.json)
 
-![https://ascella.wtf/v2/ascella/view/LlFFBzj7.png](https://ascella.wtf/v2/ascella/view/LlFFBzj7.png)
+![https://api.ascella.host/v2/ascella/view/LlFFBzj7.png](https://api.ascella.host/v2/ascella/view/LlFFBzj7.png)
 
 And your done! The dashboard is imported and all data should be viewable, if you have any issues feel free to ask in the [Support discord]({DISCORD}).
 
