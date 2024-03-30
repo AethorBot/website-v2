@@ -7,37 +7,10 @@
 
 <Seo title="Aethor Premium" />
 
-<div class="flex justify-center gap-5 md:flex-row flex-col py-20 bg-base-200">
-	<div class="card card-compact w-96 bg-base-100 shadow-xl md:mx-0 mx-auto">
-		<div class="card-body">
-			<h2 class="card-title">Aethor Premium (3 Servers)</h2>
-			<div class="card-actions justify-end">
-				<a href="https://buy.stripe.com/28o16p1kL94L3n2289" target="_blank" rel="external">
-					<button class="btn btn-accent">Buy Now (5€/m)</button>
-				</a>
-			</div>
-		</div>
-	</div>
-
-	<div class="card card-compact w-96 bg-base-100 shadow-xl md:mx-0 mx-auto">
-		<div class="card-body">
-			<h2 class="card-title">Aethor Premium (1 server)</h2>
-			<div class="card-actions justify-end">
-				<a href="https://buy.stripe.com/dR66qJ0gH1Cj5vabIK" target="_blank" rel="external">
-					<button class="btn btn-accent rounded-md">Buy Now (2.5€/m)</button>
-				</a>
-			</div>
-		</div>
-	</div>
-	<div class="card card-compact w-96 bg-base-100 shadow-xl md:mx-0 mx-auto">
-		<div class="card-body">
-			<h2 class="card-title">Aethor Premium (1 server) (lifetime)</h2>
-			<div class="card-actions justify-end">
-				<a href="https://buy.stripe.com/28oeXfbZp6WDcXCcMQ" target="_blank" rel="external">
-					<button class="btn btn-accent rounded-md">Buy Now (20€)</button>
-				</a>
-			</div>
-		</div>
+<div class="flex justify-center gap-5 md:flex-row flex-col py-20 bg-base-200 text-3xl">
+	<div class="max-w-4xl mx-auto">
+		Just send me a message privately if you are interested into the premium features and something
+		might be able to be worked out discord name: "tricked."
 	</div>
 </div>
 
@@ -101,7 +74,7 @@
 	</table>
 </div>
 <div class="max-w-7xl mx-auto">
-	<div tabindex="0" class="collapse collapse-arrow border border-base-300 bg-base-200 ">
+	<div tabindex="0" class="collapse collapse-arrow border border-base-300 bg-base-200">
 		<input type="checkbox" class="peer" />
 		<div class="collapse-title bg-base-200 text-primary-content">What is Aethor premium?</div>
 
@@ -109,7 +82,7 @@
 			<p>Aethor premium is a way to support the developers and to make running the bot worth it.</p>
 		</div>
 	</div>
-	<div tabindex="0" class="collapse collapse-arrow border border-base-300 bg-base-200 ">
+	<div tabindex="0" class="collapse collapse-arrow border border-base-300 bg-base-200">
 		<input type="checkbox" class="peer" />
 		<div class="collapse-title bg-base-200 text-primary-content">How does it work?</div>
 
@@ -125,7 +98,7 @@
 			</p>
 		</div>
 	</div>
-	<div tabindex="0" class="collapse collapse-arrow border border-base-300 bg-base-200 ">
+	<div tabindex="0" class="collapse collapse-arrow border border-base-300 bg-base-200">
 		<input type="checkbox" class="peer" />
 		<div class="collapse-title bg-base-200 text-primary-content">
 			Can i transfer premium to another server?
@@ -134,7 +107,7 @@
 			<p>Yes you can you just have to make a new ticket with the new server id</p>
 		</div>
 	</div>
-	<div tabindex="0" class="collapse collapse-arrow border border-base-300 bg-base-200 ">
+	<div tabindex="0" class="collapse collapse-arrow border border-base-300 bg-base-200">
 		<input type="checkbox" class="peer" />
 		<div class="collapse-title bg-base-200 text-primary-content">How do i create a ticket?</div>
 		<div class="collapse-content">
