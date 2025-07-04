@@ -1,5 +1,8 @@
 /* Write your global styles here, in PostCSS syntax */
-@tailwind base;
+@import "tailwindcss";
+@plugin "daisyui";
+@plugin "@tailwindcss/typography";
+/* @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
@@ -17,4 +20,4 @@ body {
 
 #download:hover {
 	@apply bg-gradient-to-r from-pink-500 to-violet-500
-}
+} */

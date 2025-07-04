@@ -1,5 +1,4 @@
 <script lang="ts">
-	import { Parallax, ParallaxLayer } from 'svelte-parallax';
 	import Seo from '../components/Seo.svelte';
 	export let data;
 	let { servers, stats } = data as { servers: Record<string, any>[]; stats: any };
@@ -24,95 +23,82 @@
 
 <Seo />
 
-<Parallax
-	sections={features.length + 6}
-	config={{ stiffness: 0.2, damping: 1 }}
-	sectionHeight={300}
+<!-- Hero Section -->
+<div class="py-72 bg-gradient-to-b from-zinc-300 to-slate-300 dark:from-zinc-900 dark:to-slate-900 text-center">
+	<h1 class="text-4xl text-zinc-900 dark:text-zinc-100 py-2">
+		Welcome to the Aethor website
+	</h1>
+	<p class="text-xl text-zinc-900 dark:text-zinc-100 py-2">
+		<b>The best suggestions bot</b>
+	</p>
+</div>
+
+<!-- Invite Button -->
+<div class="flex justify-center mt-10 z-50">
+	<a
+		class="text-white p-4 text-2xl hover:bg-sky-800 duration-150 text-center font-bold py-2 px-4 rounded"
+		href="/invite"
+		target="_blank"
+		id="download"
+	>
+		Add Aethor. {#if stats?.numbers?.guilds} Aethor is in {stats?.numbers?.guilds} servers {/if}
+	</a>
+</div>
+
+<!-- Scrolling Server List -->
+<div
+	class="flex servers horizontal pausing animate mt-40"
+	style="animation-duration: 20s; animation-delay: .5s; animation-iteration-count: infinite;"
 >
-	<ParallaxLayer rate={0.5} span={2}>
-		<div
-			class="py-72 bg-gradient-to-b from-zinc-300 to-slate-300 dark:from-zinc-900 dark:to-slate-900"
-		>
-			<div class="text-center">
-				<h1 class="text-4xl text-zinc-900 dark:text-zinc-100 py-2">
-					Welcome to the Aethor website
-				</h1>
-				<p class="text-xl text-zinc-900 dark:text-zinc-100 py-2">
-					<b> The best suggestions bot </b>
-				</p>
-			</div>
-		</div>
-	</ParallaxLayer>
-
-	<ParallaxLayer rate={1.25} span={5} offset={1.1}>
-		<div class="flex justify-center z-50">
-			<a
-				class={'text-white p-4 text-2xl hover:bg-sky-800 duration-150 text-center font-bold py-2 px-4 rounded'}
-				href={'/invite'}
-				target="_blank"
-				id="download"
-			>
-				Add Aethor. {#if stats?.numbers?.guilds} Aethor is in {stats?.numbers?.guilds} servers {/if}
-			</a>
-		</div>
-	</ParallaxLayer>
-	<ParallaxLayer rate={1.1} span={3} offset={2}>
-		<div
-			class="flex servers horizontal pausing animate mt-40"
-			style="animation-duration: 20s; animation-delay: .5s; animation-iteration-count: infinite;"
-		>
-			{#each servers ?? [] as server}
-				<div class="max-w-md p-4 bg-base-300 m-2 rounded-sm first">
-					<div class="flex">
-						<img height="128" class="h-14 rounded-md mr-2" src={server.icon} alt={server.name} />
-						<div>
-							<span class="flex gap-1">
-								<p class="font-bold truncate max-w-md w-40">{server.name}</p>
-							</span>
-							<p class="text-gray-600">{server.memberCount}</p>
-						</div>
-					</div>
-				</div>
-			{/each}
-		</div>
-	</ParallaxLayer>
-	{#each features as feature, index}
-		<ParallaxLayer rate={1.25} offset={3 + index} span={1}>
-			<div
-				class={`md:flex w-full p-2 my-10 h-100 ${
-					index % 2 ? 'md:ml-auto md:mr-0 text-right' : 'md:mr-auto md:ml-0 md:flex-row-reverse'
-				}`}
-			>
-				<div class="m-auto p-4">
-					<h3 class="md:text-5xl text-2xl dark:text-zinc-200 text-zinc-900 py-3">
-						<b>{feature.name}</b>
-					</h3>
-					<p class="md:text-2xl text-lg dark:text-zinc-400 text-zinc-800">{feature.description}</p>
-				</div>
-				<div class="m-auto p-1">
-					<img
-						class="md:h-96 md:object-cover w-auto h-auto rounded-xl"
-						alt={feature.name}
-						src={`/features/${feature.image}`}
-					/>
+	{#each servers ?? [] as server}
+		<div class="max-w-md p-4 bg-base-300 m-2 rounded-sm first">
+			<div class="flex">
+				<img height="128" class="h-14 rounded-md mr-2" src={server.icon} alt={server.name} />
+				<div>
+					<span class="flex gap-1">
+						<p class="font-bold truncate max-w-md w-40">{server.name}</p>
+					</span>
+					<p class="text-gray-600">{server.memberCount}</p>
 				</div>
 			</div>
-		</ParallaxLayer>
+		</div>
 	{/each}
+</div>
 
-	<ParallaxLayer offset={features.length + 4}>
-		<div class="flex justify-center">
-			<a
-				class={'text-white p-4 text-2xl hover:bg-sky-800 duration-150 text-center font-bold py-2 px-4 rounded'}
-				href={'/invite'}
-				target="_blank"
-				id="download"
-			>
-				Add Aethor</a
-			>
+<!-- Features Section -->
+{#each features as feature, index}
+	<div
+		class={`md:flex w-full p-2 my-10 h-100 ${
+			index % 2 ? 'md:ml-auto md:mr-0 text-right' : 'md:mr-auto md:ml-0 md:flex-row-reverse'
+		}`}
+	>
+		<div class="m-auto p-4">
+			<h3 class="md:text-5xl text-2xl dark:text-zinc-200 text-zinc-900 py-3">
+				<b>{feature.name}</b>
+			</h3>
+			<p class="md:text-2xl text-lg dark:text-zinc-400 text-zinc-800">{feature.description}</p>
 		</div>
-	</ParallaxLayer>
-</Parallax>
+		<div class="m-auto p-1">
+			<img
+				class="md:h-96 md:object-cover w-auto h-auto rounded-xl"
+				alt={feature.name}
+				src={`/features/${feature.image}`}
+			/>
+		</div>
+	</div>
+{/each}
+
+<!-- Final CTA Button -->
+<div class="flex justify-center my-16">
+	<a
+		class="text-white p-4 text-2xl hover:bg-sky-800 duration-150 text-center font-bold py-2 px-4 rounded"
+		href="/invite"
+		target="_blank"
+		id="download"
+	>
+		Add Aethor
+	</a>
+</div>
 
 <style>
 	.servers {

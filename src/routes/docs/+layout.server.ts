@@ -1,7 +1,5 @@
-import { page } from '$app/stores';
-
 export async function load({ params, fetch }) {
-	const allPostFiles = import.meta.glob('../docs/**/*.svelte.md');
+	const allPostFiles = import.meta.glob('../docs/**/*.md');
 	const iterablePostFiles = Object.entries(allPostFiles);
 
 	const allPosts = await Promise.all(
@@ -10,7 +8,7 @@ export async function load({ params, fetch }) {
 			const { metadata } = await resolver();
 			let slug;
 
-			if (path.includes('./+page.svelte.md')) {
+			if (path.includes('./+page.md')) {
 				slug = '/docs';
 			} else {
 				slug = '/docs/' + path.split('/')[1];
@@ -22,6 +20,7 @@ export async function load({ params, fetch }) {
 			};
 		})
 	);
+
 	return {
 		docs: allPosts
 	};

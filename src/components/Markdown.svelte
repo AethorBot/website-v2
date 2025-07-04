@@ -1,5 +1,5 @@
 <script>
-	import Seo from '../components/Seo.svelte';
+	import Seo from './Seo.svelte';
 
 	export let title;
 	export let desc;
@@ -10,7 +10,7 @@
 
 <Seo {title} description={desc} {image} />
 
-<div class="flex flex-col-reverse justify-between gap-6 xl:flex-row">
+<div class="flex flex-col-reverse justify-between gap-6 xl:flex-row h-full flex-1">
 	<div
 		class={`prose w-full max-w-4xl flex-grow prose-img:min-h-[20rem] prose-img:object-contain prose-img:min-w-[20rem] 
 		    prose-h3:m-0

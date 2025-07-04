@@ -40,7 +40,7 @@
 	export let user: Record<string, any>;
 </script>
 
-<div class="min-h-screen">
+<div class="min-h-screen flex flex-col">
 	<nav class="w-full gap-2 bg-zinc-900 text-zinc-200 p-4 flex flex-col md:flex-row">
 		<a href="/">
 			<div class="flex items-center">
@@ -83,17 +83,16 @@
 			<a title="Sign out" href="api/signout">Sign Out</a>
 		{/if}
 	</nav>
-	<main class="">
+	<main class="flex-grow h-auto min-h-full">
 		<slot />
 	</main>
-	<footer class="footer p-10 bg-base-300 text-base-content">
+	<footer class="footer p-10 bg-base-300 text-base-content sm:footer-horizontal">
 		<div>
 			<span class="footer-title">Company</span>
 			<a class="link link-hover" href={INVITE}>Invite</a>
 			<a class="link link-hover" href={'/discord'}>Support</a>
 			<a class="link link-hover" href={'/discord'}>Discord</a>
 			<a class="link link-hover" href="/docs">Wiki</a>
-			<a class="link link-hover" href="/dashy">Dashy</a>
 		</div>
 		<div>
 			<span class="footer-title">About</span>

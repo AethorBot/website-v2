@@ -1,8 +1,16 @@
 import { mdsvex } from 'mdsvex';
-import adapter from '@sveltejs/adapter-cloudflare';
-import preprocess from 'svelte-preprocess';
+import adapter from '@sveltejs/adapter-auto';
+import { vitePreprocess } from '@sveltejs/vite-plugin-svelte';
 import headingSlugs from 'rehype-slug';
 import linkHeadings from 'rehype-autolink-headings';
+import { join, dirname } from 'path';
+import { fileURLToPath } from 'url';
+
+const __filename = fileURLToPath(import.meta.url);
+const __dirname = dirname(__filename);
+
+const path_to_layout = join(__dirname, './src/components/Markdown.svelte');
+
 
 const rehypePlugins = [
 	headingSlugs,
@@ -31,24 +39,26 @@ const rehypePlugins = [
 
 /** @type {import('@sveltejs/kit').Config} */
 const config = {
-	extensions: ['.svelte', '.svelte.md', '.md'],
-	onwarn: (warning, handler) => {
-		// handler(warning);
-	},
-	preprocess: [
-		preprocess({}),
-		mdsvex({
+	// Consult https://svelte.dev/docs/kit/integrations
+	// for more information about preprocessors
+	preprocess: [vitePreprocess({ script: true }), mdsvex(
+		{
 			extensions: ['.svelte.md', '.md'],
 			rehypePlugins: rehypePlugins,
 			layout: {
-				_: 'src/routes/_markdown.svelte'
+				_: path_to_layout
 			}
-		})
-	],
-	target: 'es2020',
+		}
+	)],
 	kit: {
-		adapter: adapter()
-	}
+		// adapter-auto only supports some environments, see https://svelte.dev/docs/kit/adapter-auto for a list.
+		// If your environment is not supported, or you settled on a specific environment, switch out the adapter.
+		// See https://svelte.dev/docs/kit/adapters for more information about adapters.
+		adapter: adapter(),
+		alias: {
+		}
+	},
+	extensions: ['.svelte', '.svx', ".md"]
 };
 
 export default config;
