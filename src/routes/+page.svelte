@@ -19,68 +19,75 @@
 			image: 'Denied.png'
 		}
 	];
+	let isPaused = false;
 </script>
 
 <Seo />
 
 <!-- Hero Section -->
-<div class="py-72 bg-gradient-to-b from-zinc-300 to-slate-300 dark:from-zinc-900 dark:to-slate-900 text-center">
-	<h1 class="text-4xl text-zinc-900 dark:text-zinc-100 py-2">
-		Welcome to the Aethor website
-	</h1>
-	<p class="text-xl text-zinc-900 dark:text-zinc-100 py-2">
+<div
+	class="bg-gradient-to-b from-zinc-300 to-slate-300 py-72 text-center dark:from-zinc-900 dark:to-slate-900"
+>
+	<h1 class="py-2 text-4xl text-zinc-900 dark:text-zinc-100">Welcome to the Aethor website</h1>
+	<p class="py-2 text-xl text-zinc-900 dark:text-zinc-100">
 		<b>The best suggestions bot</b>
 	</p>
 </div>
 
 <!-- Invite Button -->
-<div class="flex justify-center mt-10 z-50">
+<div class="z-50 mt-10 flex justify-center">
 	<a
-		class="text-white p-4 text-2xl hover:bg-sky-800 duration-150 text-center font-bold py-2 px-4 rounded"
+		class="btn btn-primary btn-xl rounded p-4 px-4 py-2 text-center text-2xl font-bold text-white duration-150 hover:bg-sky-800"
 		href="/invite"
 		target="_blank"
 		id="download"
 	>
-		Add Aethor. {#if stats?.numbers?.guilds} Aethor is in {stats?.numbers?.guilds} servers {/if}
+		Add Aethor. {#if stats?.numbers?.guilds}
+			Aethor is in {stats?.numbers?.guilds} servers
+		{/if}
 	</a>
 </div>
 
 <!-- Scrolling Server List -->
 <div
-	class="flex servers horizontal pausing animate mt-40"
-	style="animation-duration: 20s; animation-delay: .5s; animation-iteration-count: infinite;"
+	class="server-carousel mt-20"
+	aria-hidden={true}
+	on:mouseover={() => (isPaused = true)}
+	on:focus={() => (isPaused = true)}
+	on:mouseout={() => (isPaused = false)}
+	on:blur={() => (isPaused = false)}
 >
-	{#each servers ?? [] as server}
-		<div class="max-w-md p-4 bg-base-300 m-2 rounded-sm first">
-			<div class="flex">
-				<img height="128" class="h-14 rounded-md mr-2" src={server.icon} alt={server.name} />
-				<div>
-					<span class="flex gap-1">
-						<p class="font-bold truncate max-w-md w-40">{server.name}</p>
-					</span>
-					<p class="text-gray-600">{server.memberCount}</p>
+	<div class="carousel-track" class:paused={isPaused}>
+		{#each [...(servers ?? []), ...(servers ?? [])] as server (server.id + Math.random())}
+			<div class="server-card bg-base-300">
+				<div class="flex">
+					<img class="server-icon" src={server.icon} alt={server.name} />
+					<div class="server-info">
+						<p class="server-name">{server.name}</p>
+						<p class="server-count">{server.memberCount}</p>
+					</div>
 				</div>
 			</div>
-		</div>
-	{/each}
+		{/each}
+	</div>
 </div>
 
 <!-- Features Section -->
 {#each features as feature, index}
 	<div
-		class={`md:flex w-full p-2 my-10 h-100 ${
-			index % 2 ? 'md:ml-auto md:mr-0 text-right' : 'md:mr-auto md:ml-0 md:flex-row-reverse'
+		class={`my-10 h-100 w-full p-2 md:flex ${
+			index % 2 ? 'text-right md:mr-0 md:ml-auto' : 'md:mr-auto md:ml-0 md:flex-row-reverse'
 		}`}
 	>
 		<div class="m-auto p-4">
-			<h3 class="md:text-5xl text-2xl dark:text-zinc-200 text-zinc-900 py-3">
+			<h3 class="py-3 text-2xl text-zinc-900 md:text-5xl dark:text-zinc-200">
 				<b>{feature.name}</b>
 			</h3>
-			<p class="md:text-2xl text-lg dark:text-zinc-400 text-zinc-800">{feature.description}</p>
+			<p class="text-lg text-zinc-800 md:text-2xl dark:text-zinc-400">{feature.description}</p>
 		</div>
 		<div class="m-auto p-1">
 			<img
-				class="md:h-96 md:object-cover w-auto h-auto rounded-xl"
+				class="h-auto w-auto rounded-xl md:h-96 md:object-cover"
 				alt={feature.name}
 				src={`/features/${feature.image}`}
 			/>
@@ -89,9 +96,9 @@
 {/each}
 
 <!-- Final CTA Button -->
-<div class="flex justify-center my-16">
+<div class="my-16 flex justify-center">
 	<a
-		class="text-white p-4 text-2xl hover:bg-sky-800 duration-150 text-center font-bold py-2 px-4 rounded"
+		class="btn btn-primary btn-xl rounded p-4 px-4 py-2 text-center text-2xl font-bold text-white duration-150 hover:bg-sky-800"
 		href="/invite"
 		target="_blank"
 		id="download"
@@ -101,31 +108,64 @@
 </div>
 
 <style>
-	.servers {
-		transform: translateZ(0);
+	.server-carousel {
+		overflow: hidden;
+		position: relative;
+		width: 100%;
 	}
-	.horizontal.servers {
-		display: inline-block;
-		white-space: nowrap;
+
+	.carousel-track {
+		display: flex;
+		width: max-content;
+		animation: scroll-left 40s linear infinite;
+		will-change: transform;
 	}
-	.horizontal.servers > * {
-		display: inline-block !important;
-	}
-	.animate.servers {
-		animation-timing-function: linear;
-	}
-	.pausing.servers:hover {
+
+	.carousel-track.paused {
 		animation-play-state: paused;
 	}
-	.animate.horizontal.servers {
-		animation-name: servers-horizontal;
+
+	.server-card {
+		min-width: 16rem;
+		padding: 1rem;
+		margin: 0.5rem;
+		border-radius: 0.25rem;
+		display: inline-block;
 	}
-	@keyframes servers-horizontal {
+
+	.server-icon {
+		height: 3.5rem;
+		width: 3.5rem;
+		object-fit: cover;
+		border-radius: 0.375rem;
+		margin-right: 0.5rem;
+	}
+
+	.server-info {
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+	}
+
+	.server-name {
+		font-weight: bold;
+		white-space: nowrap;
+		overflow: hidden;
+		text-overflow: ellipsis;
+		width: 10rem;
+	}
+
+	.server-count {
+		color: #999;
+		font-size: 0.875rem;
+	}
+
+	@keyframes scroll-left {
 		0% {
-			transform: translate(0);
+			transform: translateX(0);
 		}
-		to {
-			transform: translate(-50%);
+		100% {
+			transform: translateX(-50%);
 		}
 	}
 </style>
